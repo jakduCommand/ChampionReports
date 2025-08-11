@@ -72,6 +72,7 @@ func stage3() async throws {
     let matchInfos = try loadMatchInfo()
     var champions: [String : ChampionStats] = [:]
     
+    // Handle match data
     for matchInfo in matchInfos {
         let participants: [ParticipantDto] = matchInfo.info.participants
         for participant in participants {
@@ -84,6 +85,10 @@ func stage3() async throws {
             champions[champion.championName] = champion
         }
     }
+    
+    
+    // Handle match timeline
+    // TODO
     
     try saveChampionStats(champions)
 }

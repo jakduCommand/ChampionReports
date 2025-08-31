@@ -25,12 +25,12 @@ func fetchTimeline(_ MatchId: String) async throws -> TimelineDto {
     return timelineData
 }
 
-func saveTimeline(_ timelineData: TimelineDto) {
+func saveTimeline(_ matchId: String, _ timelineData: TimelineDto) {
     let encoder = JSONEncoder()
     encoder.outputFormatting = [.prettyPrinted]
     
     do {
-        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/timeline/timeline.json")
+        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/timeline/timeline_\(matchId).json")
         
         try FileManager.default.createDirectory(
             at: fileURL.deletingLastPathComponent(),
@@ -46,8 +46,8 @@ func saveTimeline(_ timelineData: TimelineDto) {
     }
 }
 
-func loadTimeline() throws -> TimelineDto? {
-    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/timeline/timeline.json")
+func loadTimeline(_ matchId: String) throws -> TimelineDto? {
+    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/timeline/timeline_\(matchId).json")
     
     let data = try Data(contentsOf: fileURL)
     let decoder = JSONDecoder()
@@ -82,7 +82,7 @@ struct ParticipantTimeLineDto: Codable {
 
 struct FrameTimeLineDto: Codable {
     let events: [EventsTimeLineDto]
-    //let participantFrames: [Int: ParticipantFrameDto]
+    let participantFrames: [Int: ParticipantFrameDto]
     let timestamp: Int
 }
 

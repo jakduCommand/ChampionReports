@@ -6,7 +6,7 @@
 //
 
 enum RiotAPI {
-    static let APIKEY = "RGAPI-fffc0051-9346-46e6-b0b7-f84c0b94ee79"
+    static let APIKEY = "RGAPI-78a83786-fc0f-400f-bf1f-b9ca2ca685db"
 }
 
 

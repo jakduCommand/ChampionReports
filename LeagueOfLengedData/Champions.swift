@@ -33,6 +33,11 @@ class ChampionStats: Codable {
         self.championName = championName
     }
     
+    // TODO: add Item build from Time line
+    func addItemBuild(timeline: TimelineDto, participantId: Int) {
+        
+    }
+    
     func addMatch(participant: ParticipantDto) {
         totalGames += 1
         if participant.win {
@@ -54,9 +59,7 @@ class ChampionStats: Codable {
             itemFrequency[item, default: 0] += 1
         }
         
-        
-        
-        // TODO: Track Runes
+        // Track Runes
         let primaryStyle = participant.perks.styles[0].style
         let subStyle = participant.perks.styles[1].style
         

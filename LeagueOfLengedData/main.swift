@@ -10,16 +10,17 @@ import Foundation
 enum Stage: Int {
     case fetchEntries = 0
     case fetchMatches = 1
-    case fetchMatchInfo = 2
+    case fetchMatchInfoAndTimeline = 2
     case championStats = 3
     case fetchTimeline = 4
     case getSummonerSpells = 10
+    case getItemInfo = 11
 }
 
 
 Task {
     
-    let stage = Stage.fetchTimeline
+    let stage = Stage.fetchMatchInfoAndTimeline
     
     switch stage {
     case .fetchEntries:
@@ -38,7 +39,7 @@ Task {
             print("Error", error)
             exit(1)
         }
-    case .fetchMatchInfo:
+    case .fetchMatchInfoAndTimeline:
         do {
             try await stage2()
             exit(0)
@@ -48,23 +49,30 @@ Task {
         }
     case .championStats:
         do {
-            try await stage3()
+            //try await stage3()
             exit(0)
         } catch {
-            print("error", error)
+            //print("error", error)
             exit(1)
         }
     case .fetchTimeline:
         do {
-            try await stage4()
+            //try await stage4()
             exit(0)
         } catch {
-            print("error", error)
+            //print("error", error)
             exit(1)
         }
     case .getSummonerSpells:
         do{
             try await downloadAndSaveSummonerSpells()
+            exit(0)
+        } catch {
+            exit(1)
+        }
+    case .getItemInfo:
+        do {
+            try await downloadItemData()
             exit(0)
         } catch {
             exit(1)

@@ -47,12 +47,12 @@ func loadMatchId() throws -> [String] {
 }
 
 
-func saveMatchInfo(_ matchInfo: [MatchDto]) {
+func saveMatchInfo(_ matchID: String, _ matchInfo: MatchDto) {
     let encoder = JSONEncoder()
     encoder.outputFormatting = [.prettyPrinted]
     
     do {
-        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/match_info/matchInfo.json")
+        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/match_info/matchInfo_\(matchID).json")
         
         try FileManager.default.createDirectory(
             at: fileURL.deletingLastPathComponent(),
@@ -68,12 +68,12 @@ func saveMatchInfo(_ matchInfo: [MatchDto]) {
     }
 }
 
-func loadMatchInfo() throws -> [MatchDto]{
-    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/match_info/matchInfo.json")
+func loadMatchInfo(_ matchID: String) throws -> MatchDto{
+    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/match_info/matchInfo_\(matchID).json")
     
     let data = try Data(contentsOf: fileURL)
     let decoder = JSONDecoder()
-    let matchDtos = try decoder.decode([MatchDto].self, from: data)
+    let matchDtos = try decoder.decode(MatchDto.self, from: data)
     
     return matchDtos
 }
@@ -137,6 +137,7 @@ struct ParticipantDto: Codable {
     let summoner1Id: Int
     let summoner2Id: Int
     let win: Bool
+    let puuid: String
 }
 
 struct PerksDto: Codable {

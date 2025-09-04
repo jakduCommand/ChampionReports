@@ -20,7 +20,7 @@ enum Stage: Int {
 
 Task {
     
-    let stage = Stage.fetchMatchInfoAndTimeline
+    let stage = Stage.getItemInfo
     
     switch stage {
     case .fetchEntries:
@@ -73,6 +73,13 @@ Task {
     case .getItemInfo:
         do {
             try await downloadItemData()
+            
+            let fileURL = FileManager.default.homeDirectoryForCurrentUser
+                .appendingPathComponent("Documents/lol_data/ddragon/item.json")
+            try ItemIndex.shared.load(from: fileURL)
+            print("Item index built: boots=\(ItemIndex.shared.boots.count), legendary=\(ItemIndex.shared.legendary.count), mythic=\(ItemIndex.shared.mythic.count)")
+        
+            
             exit(0)
         } catch {
             exit(1)

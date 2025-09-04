@@ -109,46 +109,39 @@ func stage3() async throws {
     for matchId in matchIds {
         // load
         let matchInfo = try loadMatchInfo(matchId)
-        guard let timeline = try loadTimeline(matchId) else {
-            continue
-        }
+        guard let timeline = try loadTimeline(matchId) else { continue }
         
-        // this will map participant's number to champion name for each match
-        // the reason why we need is because Riot api doens't provide champion
-        // that corresonds to participant's number
-        var participantsChampion: [String:String] = [:]     // [puuid : champion name]
-        var participantIds: [String:Int] = [:]      // [puuid : participant number]
-        
+        // Map puuid -> champion name
+        var championByPuuid: [String:String] = [:]     // [puuid : champion name]
         
         // Aggregate champion stats from match info
         // This covers wins/losses, end-of-game item tallies, rune, spelss, etc.
-        let participants: [ParticipantDto] = matchInfo.info.participants
-        
-        
-        // Check if there is champion name in the dictionary
-        // If isn't add new champoion and match info in the dictionary
-        for participant in participants {
+        for participant in matchInfo.info.participants {
+            championByPuuid[participant.puuid] = participant.championName
             
-            participantsChampion[participant.puuid] = participant.championName
-            
-            if let existingChampion = champions[participant.championName] {
-                existingChampion.addMatch(participant: participant)
+            if let bucket = champions[participant.championName] {
+                bucket.addMatch(participant: participant)   // mutate existing class instance
                 continue
+            } else {
+                let bucket = ChampionStats(championName: participant.championName)
+                bucket.addMatch(participant: participant)
+                champions[bucket.championName] = bucket
             }
-            let champion = ChampionStats(championName: participant.championName)
-            champion.addMatch(participant: participant)
-            champions[champion.championName] = champion
         }
         
-        // TODO: item build
-        for participant in timeline.info.participants {
-            participantIds[participant.puuid] = participant.participantId
+        // Reconstruct item builds from timelineDto
+        for tlp in timeline.info.participants {
+            guard let championName = championByPuuid[tlp.puuid],
+                  let bucket = champions[championName] else { continue }
             
+            try bucket.addItemBuild(timeline: timeline, participantId: tlp.participantId)
         }
     }
     
     try saveChampionStats(champions)
 }
+
+
 //
 //func stage4() async throws {
 //    let data = try await fetchTimeline("NA1_5313388433")

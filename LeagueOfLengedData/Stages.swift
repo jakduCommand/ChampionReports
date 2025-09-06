@@ -105,36 +105,62 @@ func stage3() async throws {
     let matchIds = try loadMatchId()
     var champions: [String : ChampionStats] = [:]
     
-    
     for matchId in matchIds {
         // load
         let matchInfo = try loadMatchInfo(matchId)
         guard let timeline = try loadTimeline(matchId) else { continue }
         
-        // Map puuid -> champion name
+        // Map puuid -> champion Name
         var championByPuuid: [String:String] = [:]     // [puuid : champion name]
-        
-        // Aggregate champion stats from match info
-        // This covers wins/losses, end-of-game item tallies, rune, spelss, etc.
-        for participant in matchInfo.info.participants {
-            championByPuuid[participant.puuid] = participant.championName
+        for p in matchInfo.info.participants {
+            championByPuuid[p.puuid] = p.championName
             
-            if let bucket = champions[participant.championName] {
-                bucket.addMatch(participant: participant)   // mutate existing class instance
-                continue
+            //Aggregate champion stats from MatchDto
+            if let bucket = champions[p.championName] {
+                bucket.addMatch(participant: p)
             } else {
-                let bucket = ChampionStats(championName: participant.championName)
-                bucket.addMatch(participant: participant)
+                let bucket = ChampionStats(championName: p.championName)
+                bucket.addMatch(participant: p)
                 champions[bucket.championName] = bucket
             }
         }
         
-        // Reconstruct item builds from timelineDto
-        for tlp in timeline.info.participants {
-            guard let championName = championByPuuid[tlp.puuid],
-                  let bucket = champions[championName] else { continue }
+        // Map participantId -> champoin name
+        var championByParticipantId: [Int:String] = [:]
+        for tp in timeline.info.participants {
+            if let champ = championByPuuid[tp.puuid] {
+                championByParticipantId[tp.participantId] = champ
+            }
+        }
+        
+        // Build per-champoin ordered item sequence for this match
+        var championItemBuild: [String:[Int]] = [:]
+        
+        // Flatten. sort by time, and pre-filter to events we care about
+        let events = timeline.info.frames
+            .flatMap(\.events)
+            .sorted{ $0.timestamp < $1.timestamp }
+            .filter { $0.type == "ITEM_PURCHASED" || $0.type == "ITEM_UNDO"}
+        
+        for e in events {
+            guard let pid = e.participantId,
+                  let champ = championByParticipantId[pid] else { continue }
             
-            try bucket.addItemBuild(timeline: timeline, participantId: tlp.participantId)
+            switch e.type {
+            case "ITEM_PURCHASED":
+                if let id = e.itemId {
+                    championItemBuild[champ, default: []].append(id)
+                }
+                
+            case "ITEM_UNDO":
+                if var seq = championItemBuild[champ], !seq.isEmpty {
+                    seq.removeLast()
+                    championItemBuild[champ] = seq
+                }
+                
+            default:
+                break
+            }
         }
     }
     

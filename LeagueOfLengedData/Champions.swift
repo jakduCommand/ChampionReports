@@ -33,24 +33,13 @@ class ChampionStats: Codable {
         self.championName = championName
     }
     
-    // TODO: add Item build from Time line
-    func addItemBuild(timeline: TimelineDto, participantId: Int) throws {
-        let frames = timeline.info.frames
-        var startItem: Set<Int> = []
-        var shoes: Int = 0
-        var coreItem: [Int] = []
+    func IngestBuildSequence(_ sequence: [Int]) {
+        var boots: Int?
+        var corse: [Int] = []
+        var seenCore = Set<Int>()
         
-        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/ddragon/item.json")
-        try ItemIndex.shared.load(from: fileURL)
-        
-        for frame in frames {
-            let events = frame.events
-            for event in events {
-                let type = event.type
-                if type == "ITEM_PURCHASED" {
-                    
-                }
-            }
+        for id in sequence {
+            if ItemIndex.shared.isTrinket(id) || ItemIndex.shared.isConsumable(id) { continue }
         }
     }
     

@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Purchase = (id: Int, ts: Int)
+
 class ChampionStats: Codable {
     let championName: String
     var totalGames: Int = 0
@@ -14,7 +16,7 @@ class ChampionStats: Codable {
     
     // Items
     var itemFrequency: [Int : Int] = [:]
-    var startItemFrequency: [Int : Set<Int>] = [:]
+    var startItemFrequency: [Set<Int> : Int] = [:]
     var shoesFrequency: [Int : Int] = [:]
     var firstCoreItemFrequency: [Int : Int] = [:]
     var secondCoreItemFrequency: [Int : Int] = [:]
@@ -33,13 +35,35 @@ class ChampionStats: Codable {
         self.championName = championName
     }
     
-    func IngestBuildSequence(_ sequence: [Int]) {
+    func ingestBuildSequence(_ sequence: [Int:Int]) {
         var boots: Int?
-        var corse: [Int] = []
+        var starters = Set<Int>()
+        var cores: [Int] = []
         var seenCore = Set<Int>()
+        var nonTrinketPurchaseCount = 0;
+        for id in sequence.keys {
+            if ItemIndex.shared.isTrinket(id) { continue }
+            if boots == nil, ItemIndex.shared.isBoots(id) { boots = id; continue }
+            if nonTrinketPurchaseCount < 2, ItemIndex.shared.isStarter(id) {
+                starters.insert(id)
+                continue
+            }
+            if ItemIndex.shared.isLegendary(id) {
+                if seenCore.insert(id).inserted { cores.append(id) }
+            }
+            
+            nonTrinketPurchaseCount += 1
+        }
         
-        for id in sequence {
-            if ItemIndex.shared.isTrinket(id) || ItemIndex.shared.isConsumable(id) { continue }
+        if let b = boots { shoesFrequency[b, default: 0] += 1}
+        if let first = cores.dropFirst(0).first { firstCoreItemFrequency[first, default: 0] += 1 }
+        if let second = cores.dropFirst(1).first { secondCoreItemFrequency[second, default: 0] += 1 }
+        if let third = cores.dropFirst(2).first { thirdCoreItemFrequency[third, default: 0] += 1 }
+        if let fourth = cores.dropFirst(3).first { fourthCoreItemFrequency[fourth, default: 0] += 1 }
+        if let fifth = cores.dropFirst(4).first { fifthCoreItemFrequency[fifth, default: 0] += 1 }
+        if let sixth = cores.dropFirst(5).first { sixthCoreItemFrequency[sixth, default: 0] += 1 }
+        if !starters.isEmpty {
+            startItemFrequency[starters, default: 0] += 1
         }
     }
     

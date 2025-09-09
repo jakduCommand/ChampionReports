@@ -13,6 +13,8 @@ struct LeagueOfLegendDataViewerApp: App {
     @State private var legendaryIds: [Int] = []
     @State private var bootsIds: [Int] = []
     @State private var starteritemIds: [Int] = []
+    @State private var basicItemIds: [Int] = []
+    @State private var epicItemIds: [Int] = []
     @State private var version: String = ""
     var body: some Scene {
         WindowGroup {
@@ -43,6 +45,24 @@ struct LeagueOfLegendDataViewerApp: App {
                     version: ItemIndex.shared.version,
                     starterItemIds: starteritemIds
                 )
+                
+                Text("Basic Items")
+                    .font(.headline)
+                    .bold()
+                
+                BasicGridView(
+                    version: ItemIndex.shared.version,
+                    basicItems: basicItemIds
+                )
+                
+                Text("Epic Items")
+                    .font(.headline)
+                    .bold()
+                
+                EpicGridView(
+                    version: ItemIndex.shared.version,
+                    epicItems: epicItemIds
+                )
             }
             .task {
                 await initItemIndex()
@@ -50,6 +70,8 @@ struct LeagueOfLegendDataViewerApp: App {
                 bootsIds = Array(ItemIndex.shared.boots).sorted()
                 starteritemIds = Array(ItemIndex.shared.starters).sorted()
                 version = ItemIndex.shared.version
+                basicItemIds = Array(ItemIndex.shared.basic).sorted()
+                epicItemIds = Array(ItemIndex.shared.epic).sorted()
                 print("Legendary count:", legendaryIds.count)
             }
             .alert("Failed to load items", isPresented: .constant(loadError != nil), actions: {

@@ -104,11 +104,18 @@ func stage2() async throws {
 func stage3() async throws {
     let matchIds = try loadMatchId()
     var champions: [String : ChampionStats] = [:]
-    
+    var count = 0
+    var limit = 100 // bind dnumber of match id that would be aggregated.
     for matchId in matchIds {
+        if count >= limit { break }
         // load
-        let matchInfo = try loadMatchInfo(matchId)
-        guard let timeline = try loadTimeline(matchId) else { continue }
+        guard let matchInfo = try? loadMatchInfo(matchId),
+           let timeline = try? loadTimeline(matchId) else {
+            print("Skipping \(matchId) - missing matchInfo or timeline file")
+            continue
+        }
+        
+        print("Opening match \(matchId) timeline and match info...")
         
         // Map puuid -> champion Name
         var championByPuuid: [String:String] = [:]     // [puuid : champion name]
@@ -134,7 +141,9 @@ func stage3() async throws {
         }
         
         // Build per-champoin ordered item sequence for this match
-        var championItemBuild: [String:[Int]] = [:]
+        // [ChampName : [itemId : timestamp]
+        
+        var championItemBuild: [String:[Purchase]] = [:]
         
         // Flatten. sort by time, and pre-filter to events we care about
         let events = timeline.info.frames
@@ -149,10 +158,11 @@ func stage3() async throws {
             switch e.type {
             case "ITEM_PURCHASED":
                 if let id = e.itemId {
-                    championItemBuild[champ, default: []].append(id)
+                    championItemBuild[champ, default: []].append((id: id, ts: e.timestamp))
                 }
                 
             case "ITEM_UNDO":
+                // pops the last purchase
                 if var seq = championItemBuild[champ], !seq.isEmpty {
                     seq.removeLast()
                     championItemBuild[champ] = seq
@@ -162,7 +172,12 @@ func stage3() async throws {
                 break
             }
         }
+        
+        //TODO: call ingestBuildsequence
+        count += 1
+        print(championItemBuild)
     }
+    
     
     try saveChampionStats(champions)
 }

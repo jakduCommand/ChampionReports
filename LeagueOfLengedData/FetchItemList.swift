@@ -87,9 +87,13 @@ final class ItemIndex: Codable {
     private(set) var completed: Set<Int> = []
     private(set) var legendary: Set<Int> = []
     private(set) var mythic: Set<Int> = []
+    private(set) var advancedBoots: Set<Int> = []
+    private(set) var basic: Set<Int> = []
+    private(set) var epic: Set<Int> = []
     
     // Convenience checks
     func isBoots(_ id: Int) -> Bool { boots.contains(id) }
+    func isAdvancedBoots(_ id: Int) -> Bool { advancedBoots.contains(id) }
     func isTrinket(_ id: Int) -> Bool {
         trinkets.contains(id)
     }
@@ -134,6 +138,7 @@ final class ItemIndex: Codable {
         completed.removeAll()
         legendary.removeAll()
         mythic.removeAll()
+        advancedBoots.removeAll()
         
         // Populate
         for (key, detail) in wrapper.data {
@@ -143,10 +148,45 @@ final class ItemIndex: Codable {
             let tags = Set(detail.tags ?? [])
             
             // Boots: tag "Boots"
-            if tags.contains("Boots")
-                || detail.name.localizedCaseInsensitiveContains("Gunmetal Greaves"){
+            if tags.contains("Boots"),
+               detail.gold.total < 1400,
+               detail.gold.total > 300 {
                 if isPurchasableNow(detail, id: id) {
                     boots.insert(id)
+                }
+            }
+            
+            // AdvancedBoots: hardcoding by name
+            if detail.name.localizedCaseInsensitiveContains("Armored Advance")
+                || detail.name.localizedCaseInsensitiveContains("Chainlaced Crushers")
+                || detail.name.localizedCaseInsensitiveContains("Crimson Lucidity")
+                || detail.name.localizedCaseInsensitiveContains("Forever Forward")
+                || detail.name.localizedCaseInsensitiveContains("Gunmetal Greaves")
+                || detail.name.localizedCaseInsensitiveContains("Spellslinger's Shoes")
+                || detail.name.localizedCaseInsensitiveContains("Swiftmarch") {
+                if isPurchasableNow(detail, id: id) {
+                    advancedBoots.insert(id)
+                }
+                
+            }
+            
+            if detail.name.localizedStandardContains("Amplifying Tome")
+                || detail.name.localizedStandardContains("B. F. Sword")
+                || detail.name.localizedStandardContains("Blasting Wand")
+                || detail.name.localizedStandardContains("Cloak of Agility")
+                || detail.name.localizedStandardContains("Cloth Armor")
+                || detail.name.localizedStandardContains("Dagger")
+                || detail.name.localizedStandardContains("Faerie Charm")
+                || detail.name.localizedStandardContains("Glowing Mote")
+                || detail.name.localizedStandardContains("Long Sword")
+                || detail.name.localizedStandardContains("Needlessly Large Rod")
+                || detail.name.localizedStandardContains("Null-Magic Mantle")
+                || detail.name.localizedStandardContains("Pickaxe")
+                || detail.name.localizedStandardContains("Rejuvenation Bead")
+                || detail.name.localizedStandardContains("Ruby Crystal")
+                || detail.name.localizedStandardContains("Sapphire Crystal") {
+                if isPurchasableNow(detail, id: id) {
+                    basic.insert(id)
                 }
             }
             
@@ -198,6 +238,7 @@ final class ItemIndex: Codable {
                !trinkets.contains(id),
                !consumables.contains(id),
                !mythic.contains(id),
+               !advancedBoots.contains(id),
                (detail.gold.total >= 1500
                 || detail.name.localizedCaseInsensitiveContains("Zaz'Zak's Realmspike")
                 || detail.name.localizedCaseInsensitiveContains("Bloodsong")
@@ -207,6 +248,19 @@ final class ItemIndex: Codable {
                ) {
                 if isPurchasableNow(detail, id: id) {
                     legendary.insert(id)
+                }
+            }
+            
+            if !boots.contains(id),
+               !trinkets.contains(id),
+               !consumables.contains(id),
+               !mythic.contains(id),
+               !legendary.contains(id),
+               !advancedBoots.contains(id),
+               !starters.contains(id),
+               !basic.contains(id) {
+                if isPurchasableNow(detail, id: id) || detail.name.localizedCaseInsensitiveContains("Runic Compass") {
+                    epic.insert(id)
                 }
             }
         }

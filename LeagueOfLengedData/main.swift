@@ -65,7 +65,9 @@ Task {
         }
     case .getSummonerSpells:
         do{
-            try await downloadAndSaveSummonerSpells()
+            let version = "15.18.1"
+            try await downloadAndSaveSummonerSpells(version)
+            
             exit(0)
         } catch {
             exit(1)

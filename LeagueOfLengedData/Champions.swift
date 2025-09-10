@@ -26,7 +26,7 @@ class ChampionStats: Codable {
     var sixthCoreItemFrequency: [Int : Int] = [:]
     
     // summoner spells
-    var spellFrequency: [Int : Set<Int>] = [:]
+    var spellFrequency: [Set<String> : Int] = [:]
     
     // Rune Page
     var fullRunePageFrequency: [RunePage: Int] = [:]
@@ -35,36 +35,45 @@ class ChampionStats: Codable {
         self.championName = championName
     }
     
-    func ingestBuildSequence(_ sequence: [Int:Int]) {
+    func ingestBuildSequence(_ sequence: [Purchase]) {
         var boots: Int?
         var starters = Set<Int>()
         var cores: [Int] = []
-        var seenCore = Set<Int>()
         var nonTrinketPurchaseCount = 0;
-        for id in sequence.keys {
-            if ItemIndex.shared.isTrinket(id) { continue }
-            if boots == nil, ItemIndex.shared.isBoots(id) { boots = id; continue }
-            if nonTrinketPurchaseCount < 2, ItemIndex.shared.isStarter(id) {
-                starters.insert(id)
+        for purchase in sequence {
+            let itemId = purchase.id
+            if ItemIndex.shared.isTrinket(itemId) {
                 continue
             }
-            if ItemIndex.shared.isLegendary(id) {
-                if seenCore.insert(id).inserted { cores.append(id) }
+            else if ItemIndex.shared.isStarter(itemId), purchase.ts < 60000, nonTrinketPurchaseCount <= 2 {
+                starters.insert(itemId)
+            }
+            else if ItemIndex.shared.isBoots(itemId), boots == nil {
+                boots = itemId
+            }
+            else if ItemIndex.shared.isLegendary(itemId) {
+                cores.append(itemId)
             }
             
             nonTrinketPurchaseCount += 1
         }
         
-        if let b = boots { shoesFrequency[b, default: 0] += 1}
-        if let first = cores.dropFirst(0).first { firstCoreItemFrequency[first, default: 0] += 1 }
-        if let second = cores.dropFirst(1).first { secondCoreItemFrequency[second, default: 0] += 1 }
-        if let third = cores.dropFirst(2).first { thirdCoreItemFrequency[third, default: 0] += 1 }
-        if let fourth = cores.dropFirst(3).first { fourthCoreItemFrequency[fourth, default: 0] += 1 }
-        if let fifth = cores.dropFirst(4).first { fifthCoreItemFrequency[fifth, default: 0] += 1 }
-        if let sixth = cores.dropFirst(5).first { sixthCoreItemFrequency[sixth, default: 0] += 1 }
+        if let bs = boots { shoesFrequency[bs, default: 0] += 1}
+        
         if !starters.isEmpty {
             startItemFrequency[starters, default: 0] += 1
         }
+        
+        if let firstCore = cores.dropFirst(0).first { firstCoreItemFrequency[firstCore, default: 0] += 1 }
+        if let secondCore = cores.dropFirst(1).first { secondCoreItemFrequency[secondCore, default: 0] += 1 }
+        if let thirdCore = cores.dropFirst(2).first { thirdCoreItemFrequency[thirdCore, default: 0] += 1 }
+        if let fourthCore = cores.dropFirst(3).first { fourthCoreItemFrequency[fourthCore, default: 0] += 1 }
+        if let fifthCore = cores.dropFirst(4).first { fifthCoreItemFrequency[fifthCore, default: 0] += 1 }
+        if let sixthCore = cores.dropFirst(5).first { sixthCoreItemFrequency[sixthCore, default: 0] += 1 }
+    }
+    
+    func addSummonerSpell(_ spell: Set<String>) {
+        spellFrequency[spell, default: 0] += 1
     }
     
     func addMatch(participant: ParticipantDto) {

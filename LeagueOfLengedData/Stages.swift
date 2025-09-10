@@ -105,29 +105,41 @@ func stage3() async throws {
     let matchIds = try loadMatchId()
     var champions: [String : ChampionStats] = [:]
     var count = 0
-    var limit = 100 // bind dnumber of match id that would be aggregated.
+    let limit = 100 // bind dnumber of match id that would be aggregated.
+    let summonerSpellLookupTable = try loadSummonerSpells()
+    
     for matchId in matchIds {
         if count >= limit { break }
         // load
         guard let matchInfo = try? loadMatchInfo(matchId),
            let timeline = try? loadTimeline(matchId) else {
-            print("Skipping \(matchId) - missing matchInfo or timeline file")
+            //print("Skipping \(matchId) - missing matchInfo or timeline file")
             continue
         }
         
-        print("Opening match \(matchId) timeline and match info...")
+        //print("Opening match \(matchId) timeline and match info...")
         
         // Map puuid -> champion Name
         var championByPuuid: [String:String] = [:]     // [puuid : champion name]
         for p in matchInfo.info.participants {
             championByPuuid[p.puuid] = p.championName
+            var spells = Set<String>()
+            if let s1 = summonerSpellLookupTable[p.summoner1Id],
+               let s2 = summonerSpellLookupTable[p.summoner2Id] {
+                spells.insert(s1)
+                spells.insert(s2)
+            } else {
+                spells = []
+            }
             
             //Aggregate champion stats from MatchDto
             if let bucket = champions[p.championName] {
                 bucket.addMatch(participant: p)
+                bucket.addSummonerSpell(spells)
             } else {
                 let bucket = ChampionStats(championName: p.championName)
                 bucket.addMatch(participant: p)
+                bucket.addSummonerSpell(spells)
                 champions[bucket.championName] = bucket
             }
         }
@@ -174,8 +186,18 @@ func stage3() async throws {
         }
         
         //TODO: call ingestBuildsequence
+        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/ddragon/item.json")
+        try ItemIndex.shared.load(from: fileURL)
+        for champ in championItemBuild.keys {
+            if let bucket = champions[champ] {
+                bucket.ingestBuildSequence(championItemBuild[champ] ?? [])
+            } else {
+                let bucket = ChampionStats(championName: champ)
+                bucket.ingestBuildSequence(championItemBuild[champ] ?? [])
+                champions[bucket.championName] = bucket
+            }
+        }
         count += 1
-        print(championItemBuild)
     }
     
     

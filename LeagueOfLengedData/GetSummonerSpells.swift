@@ -7,8 +7,8 @@
 
 import Foundation
 
-func downloadAndSaveSummonerSpells() async throws {
-    let urlString = "https://ddragon.leagueoflegends.com/cdn/15.13.1/data/en_US/summoner.json"
+func downloadAndSaveSummonerSpells(_ version: String) async throws {
+    let urlString = "https://ddragon.leagueoflegends.com/cdn/\(version)/data/en_US/summoner.json"
     guard let url = URL(string: urlString) else {
         throw URLError(.badURL)
     }
@@ -24,7 +24,7 @@ func downloadAndSaveSummonerSpells() async throws {
     let prettyData = try JSONSerialization.data(withJSONObject: json, options: [.prettyPrinted])
     
     // save to file
-    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/summoner_spell.json")
+    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/ddragon/summoner_spell.json")
     
     try FileManager.default.createDirectory(at: fileURL.deletingLastPathComponent(), withIntermediateDirectories: true)
     
@@ -33,29 +33,43 @@ func downloadAndSaveSummonerSpells() async throws {
     print("Saved summoner spells to \(fileURL.path)")
 }
 
-func createMap() throws -> [Int: SummonerSpell] {
-    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/summoner_spell.json")
+func readSummonerSpellData() throws -> SummonerDataWrapper {
+    let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/ddragon/summoner_spell.json")
+    let data = try Data(contentsOf: fileURL)
+    return try JSONDecoder().decode(SummonerDataWrapper.self, from: data)
+}
+
+func loadSummonerSpells() throws -> [Int: String] {
+    let wrapper = try readSummonerSpellData()
     
-    let decoder = JSONDecoder()
-    let wrapper = try decoder.decode(SummonerDataWrapper.self, from: Data(contentsOf: fileURL))
-    
-    var spellMap: [Int: SummonerSpell] = [:]
-    for spell in wrapper.data.values {
-        if let id = Int(spell.key) {
-            spellMap[id] = spell
+    var lookup: [Int: String] = [:]
+    for detail in wrapper.data.values {
+        if let intkey = Int(detail.key) {
+            lookup[intkey] = detail.name
         }
     }
     
-    return spellMap
-}
-struct SummonerSpell: Codable {
-    let id: String
-    let key: String
-    let name: String
-    let description: String
-    
+    return lookup
 }
 
 struct SummonerDataWrapper: Codable {
+    let type: String
+    let version: String
     let data: [String: SummonerSpell]
 }
+
+struct SummonerSpell: Codable {
+    let id: String
+    let name: String
+    let description: String
+    let tooltip: String
+    let key: String
+    let summonerLevel: Int
+    let image: SummonerSpellImage
+}
+
+struct SummonerSpellImage: Codable {
+    let full: String
+}
+
+

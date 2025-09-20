@@ -8,7 +8,7 @@ import Foundation
 
 func fetchMatchIDs(for puuid: String) async throws -> [String] {
     
-    let urlString = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/\(puuid)/ids?start=0&count=50&api_key=\(RiotAPI.APIKEY)"
+    let urlString = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/\(puuid)/ids?type=ranked&start=0&count=50&api_key=\(RiotAPI.APIKEY)"
     
     guard let url = URL(string: urlString) else { throw URLError(.badURL)}
     

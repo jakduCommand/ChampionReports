@@ -58,13 +58,18 @@ func stage2() async throws {
         
         // Get match info
         do {
-            count += 1
+            
             let matchInfo = try await fetchMatchInfo(matchId: matchId)
             try await Task.sleep(nanoseconds: 1400_000_000)
             
             let matchTimeline = try await fetchTimeline(matchId)
             try await Task.sleep(nanoseconds: 1400_000_000)
             
+            if matchInfo.info.gameMode != "CLASSIC" {
+                continue
+            }
+            
+            count += 1
             saveMatchInfo(matchId, matchInfo)
             
             saveTimeline(matchId, matchTimeline)
@@ -200,8 +205,13 @@ func stage3() async throws {
         count += 1
     }
     
+    for champ in champions {
+        let champName = champ.key
+        let champStats = champ.value
     
-    try saveChampionStats(champions)
+        try saveChampionStats(champName, champStats)
+    }
+
 }
 
 

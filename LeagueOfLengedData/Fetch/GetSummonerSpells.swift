@@ -45,7 +45,7 @@ func loadSummonerSpells() throws -> [Int: String] {
     var lookup: [Int: String] = [:]
     for detail in wrapper.data.values {
         if let intkey = Int(detail.key) {
-            lookup[intkey] = detail.name
+            lookup[intkey] = detail.image.full
         }
     }
     

@@ -27,7 +27,7 @@
 		E17F4A442E66B16A00B239F7 /* Exceptions for "LeagueOfLengedData" folder in "LeagueOfLegendDataViewer" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				FetchItemList.swift,
+				Fetch/FetchItemList.swift,
 			);
 			target = E17F4A322E66AE9800B239F7 /* LeagueOfLegendDataViewer */;
 		};

@@ -78,24 +78,6 @@ func loadMatchInfo(_ matchID: String) throws -> MatchDto{
     return matchDtos
 }
 
-//func correctedLaneIfValid(from participants: [ParticipantDto]) -> [String]? {
-//    // TODO
-//    let smiteID = 11
-//    var correctedLanes: [String] = []
-//    var smiteCount = 0
-//    
-//    for participant in participants {
-//        let hasSmite = (participant.summoner1Id == smiteID || participant.summoner2Id == smiteID)
-//        if hasSmite {
-//            smiteCount += 1
-//        }
-//        
-//        // Correct lane
-//    }
-//    return nil
-//}
-
-
 enum Role: String, CaseIterable {
     case top = "TOP"
     case jungle = "JUNGLE"

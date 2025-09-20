@@ -9,21 +9,30 @@ import Foundation
 
 typealias Purchase = (id: Int, ts: Int)
 
+struct ItemFrequencies: Codable {
+    var allItems: [Int: Int] = [:]
+    var starters: [Set<Int>: Int] = [:]
+    var boots: [Int: Int] = [:]
+    var firstCore: [Int : Int] = [:]
+    var secondCore: [Int : Int] = [:]
+    var thirdCore: [Int : Int] = [:]
+    var fourthCore: [Int : Int] = [:]
+    var fifthCore: [Int : Int] = [:]
+    var sixthCore: [Int : Int] = [:]
+}
+
+struct abiliies: Codable {
+    
+}
+
 class ChampionStats: Codable {
     let championName: String
     var totalGames: Int = 0
     var totalWins: Int = 0
+    //var championDetail: Champion
     
     // Items
-    var itemFrequency: [Int : Int] = [:]
-    var startItemFrequency: [Set<Int> : Int] = [:]
-    var shoesFrequency: [Int : Int] = [:]
-    var firstCoreItemFrequency: [Int : Int] = [:]
-    var secondCoreItemFrequency: [Int : Int] = [:]
-    var thirdCoreItemFrequency: [Int : Int] = [:]
-    var fourthCoreItemFrequency: [Int : Int] = [:]
-    var fifthCoreItemFrequency: [Int : Int] = [:]
-    var sixthCoreItemFrequency: [Int : Int] = [:]
+    var items = ItemFrequencies()
     
     // summoner spells
     var spellFrequency: [Set<String> : Int] = [:]
@@ -33,6 +42,7 @@ class ChampionStats: Codable {
     
     init(championName: String) {
         self.championName = championName
+        //championDetail = fetchChampion()
     }
     
     func ingestBuildSequence(_ sequence: [Purchase]) {
@@ -58,18 +68,18 @@ class ChampionStats: Codable {
             nonTrinketPurchaseCount += 1
         }
         
-        if let bs = boots { shoesFrequency[bs, default: 0] += 1}
+        if let bs = boots { items.boots[bs, default: 0] += 1}
         
         if !starters.isEmpty {
-            startItemFrequency[starters, default: 0] += 1
+            items.starters[starters, default: 0] += 1
         }
         
-        if let firstCore = cores.dropFirst(0).first { firstCoreItemFrequency[firstCore, default: 0] += 1 }
-        if let secondCore = cores.dropFirst(1).first { secondCoreItemFrequency[secondCore, default: 0] += 1 }
-        if let thirdCore = cores.dropFirst(2).first { thirdCoreItemFrequency[thirdCore, default: 0] += 1 }
-        if let fourthCore = cores.dropFirst(3).first { fourthCoreItemFrequency[fourthCore, default: 0] += 1 }
-        if let fifthCore = cores.dropFirst(4).first { fifthCoreItemFrequency[fifthCore, default: 0] += 1 }
-        if let sixthCore = cores.dropFirst(5).first { sixthCoreItemFrequency[sixthCore, default: 0] += 1 }
+        if let firstCore = cores.dropFirst(0).first { items.firstCore[firstCore, default: 0] += 1 }
+        if let secondCore = cores.dropFirst(1).first { items.secondCore[secondCore, default: 0] += 1 }
+        if let thirdCore = cores.dropFirst(2).first { items.thirdCore[thirdCore, default: 0] += 1 }
+        if let fourthCore = cores.dropFirst(3).first { items.fourthCore[fourthCore, default: 0] += 1 }
+        if let fifthCore = cores.dropFirst(4).first { items.fifthCore[fifthCore, default: 0] += 1 }
+        if let sixthCore = cores.dropFirst(5).first { items.sixthCore[sixthCore, default: 0] += 1 }
     }
     
     func addSummonerSpell(_ spell: Set<String>) {
@@ -83,7 +93,7 @@ class ChampionStats: Codable {
         }
         
         // Track items
-        let items = [
+        let pitems = [
             participant.item0,
             participant.item1,
             participant.item2,
@@ -93,8 +103,8 @@ class ChampionStats: Codable {
             participant.item6
         ]
         
-        for item in items where item != 0 {
-            itemFrequency[item, default: 0] += 1
+        for item in pitems where item != 0 {
+            items.allItems[item, default: 0] += 1
         }
         
         // Track Runes
@@ -122,7 +132,7 @@ class ChampionStats: Codable {
     }
 }
 
-func saveChampionStats(_ stats: [String: ChampionStats]) throws {
+func saveAllChampionStats(_ stats: [String: ChampionStats]) throws {
     
     let encoder = JSONEncoder()
     encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
@@ -141,6 +151,27 @@ func saveChampionStats(_ stats: [String: ChampionStats]) throws {
         print("Saved champion stats to \(fileURL.path)")
     } catch {
         print("Faild to save match info: ", error)
+    }
+}
+
+func saveChampionStats(_ name: String, _ stats: ChampionStats) throws {
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+    
+    do {
+        let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/Champion_stats/\(name).json")
+        
+        try FileManager.default.createDirectory(
+            at: fileURL.deletingLastPathComponent(),
+            withIntermediateDirectories: true,
+            attributes: nil
+        )
+        
+        let data = try encoder.encode(stats)
+        try data.write(to: fileURL)
+        print("Saved champion stats to \(fileURL.path)")
+    } catch {
+        print("Failed to save match Info of \(name): ", error)
     }
 }
 

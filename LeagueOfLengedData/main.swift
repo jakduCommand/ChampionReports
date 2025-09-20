@@ -12,7 +12,6 @@ enum Stage: Int {
     case fetchMatches = 1
     case fetchMatchInfoAndTimeline = 2
     case championStats = 3
-    case fetchTimeline = 4
     case getSummonerSpells = 10
     case getItemInfo = 11
 }
@@ -20,7 +19,7 @@ enum Stage: Int {
 
 Task {
     
-    let stage = Stage.championStats
+    let stage = Stage.fetchMatchInfoAndTimeline
     
     switch stage {
     case .fetchEntries:
@@ -53,14 +52,6 @@ Task {
             exit(0)
         } catch {
             print("error", error)
-            exit(1)
-        }
-    case .fetchTimeline:
-        do {
-            //try await stage4()
-            exit(0)
-        } catch {
-            //print("error", error)
             exit(1)
         }
     case .getSummonerSpells:

@@ -216,8 +216,9 @@ final class ItemIndex: Codable {
             
             // Starters
             // depth == 1 and totla <= 500 and not trinket
-            if (detail.depth ?? 0) <= 1,
-               detail.gold.total <= 500,
+            if (((detail.depth ?? 0) <= 1 &&
+               detail.gold.total <= 500) ||
+               detail.name.localizedCaseInsensitiveContains("World Atlas")),
                !trinkets.contains(id) {
                 if isPurchasableNow(detail, id: id) {
                     starters.insert(id)

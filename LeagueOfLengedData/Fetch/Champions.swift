@@ -21,15 +21,22 @@ struct ItemFrequencies: Codable {
     var sixthCore: [Int : Int] = [:]
 }
 
-struct abiliies: Codable {
-    
+struct Record: Codable {
+    var match: Int
+    var win: Int
+    var lose: Int
 }
 
 class ChampionStats: Codable {
     let championName: String
+    let id: String
+    let version: String
+    let championDetail: Champion
+    
     var totalGames: Int = 0
     var totalWins: Int = 0
-    //var championDetail: Champion
+    var laneFrequency: [String: Int] = [:]
+    var winRateByLane: [String: [String: Int]] = [:]
     
     // Items
     var items = ItemFrequencies()
@@ -40,9 +47,11 @@ class ChampionStats: Codable {
     // Rune Page
     var fullRunePageFrequency: [RunePage: Int] = [:]
     
-    init(championName: String) {
+    init(championName: String, id:String, version: String, championDetail: Champion) {
         self.championName = championName
-        //championDetail = fetchChampion()
+        self.version = version
+        self.championDetail = championDetail
+        self.id = id
     }
     
     func ingestBuildSequence(_ sequence: [Purchase]) {
@@ -64,7 +73,6 @@ class ChampionStats: Codable {
             else if ItemIndex.shared.isLegendary(itemId) {
                 cores.append(itemId)
             }
-            
             nonTrinketPurchaseCount += 1
         }
         

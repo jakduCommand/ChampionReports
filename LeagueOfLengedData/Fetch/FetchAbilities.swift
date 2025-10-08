@@ -57,6 +57,7 @@ struct Passive: Codable {
 }
 
 func fetchChampion(name: String, version: String) async throws -> Champion {
+    
     let url = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(version)/data/en_US/champion/\(name).json")!
     let (data, _) = try await URLSession.shared.data(from: url)
     
@@ -67,4 +68,17 @@ func fetchChampion(name: String, version: String) async throws -> Champion {
     }
     
     return champion
+}
+
+func fetchVersion() async throws -> String {
+
+    let url = URL(string: "https://ddragon.leagueoflegends.com/api/versions.json")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    let decoded: [String] = try JSONDecoder().decode([String].self, from: data)
+    guard let version = decoded.first else {
+        throw URLError(.badServerResponse)
+    }
+    
+    return version
+
 }

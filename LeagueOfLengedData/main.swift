@@ -14,12 +14,13 @@ enum Stage: Int {
     case championStats = 3
     case getSummonerSpells = 10
     case getItemInfo = 11
+    case test = 100
 }
 
 
 Task {
     
-    let stage = Stage.fetchMatchInfoAndTimeline
+    let stage = Stage.test
     
     switch stage {
     case .fetchEntries:
@@ -75,6 +76,28 @@ Task {
             
             exit(0)
         } catch {
+            exit(1)
+        }
+    case .test:
+        do {
+            let version = try await fetchVersion()
+            let championList = try await fetchChampionList(version)
+            let matchId = "NA1_5344753734"
+            let parser = try MatchParser(version: version, championList: championList)
+            let matchInfo = try loadMatchInfo(matchId)
+            let timeline = try loadTimeline(matchId)
+            let result = try await parser.parse(matchId: matchId, matchInfo: matchInfo, timeline: timeline)
+            
+            for champ in result {
+                print("Champion: \(champ.key)")
+                let itemBuild = champ.value.itemBuild
+                for (id, ts) in itemBuild {
+                    print("\(id) at \(ts)")
+                }
+            }
+            exit(0)
+        } catch {
+            print(error)
             exit(1)
         }
     default:

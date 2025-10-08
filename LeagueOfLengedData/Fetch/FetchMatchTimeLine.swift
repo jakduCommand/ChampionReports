@@ -46,7 +46,7 @@ func saveTimeline(_ matchId: String, _ timelineData: TimelineDto) {
     }
 }
 
-func loadTimeline(_ matchId: String) throws -> TimelineDto? {
+func loadTimeline(_ matchId: String) throws -> TimelineDto {
     let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("/Documents/lol_data/timeline/timeline_\(matchId).json")
     
     let data = try Data(contentsOf: fileURL)

@@ -1,94 +1,10 @@
 //
-//  Stages.swift
+//  Stage3.swift
 //  LeagueOfLengedData
 //
-//  Created by Jungwoon Ko on 7/2/25.
+//  Created by Jungwoon Ko on 9/25/25.
 //
-
 import Foundation
-
-/**
- * Stage 0 is the first step to collect league of legedns data. It collect puuid of certian tier.
- */
-func stage0() async throws {
-    let data = try await fetchLeagueListDTO()
-    saveLeagueListDTO(data)
-    savePuuid(data)
-}
-
-/**
- * Stage 1 uses puuid that are collected from stag 0. It collects matchID and filters out
- * duplicated matchID
- */
-func stage1() async throws {
-    let puuids = try loadPuuids()
-    var allMatchIDs = Set<String>()
-    var failedPuuids = [String]() // for logging
-    for puuid in puuids {
-        do {
-            let matchIDs = try await fetchMatchIDs(for: puuid)
-            allMatchIDs.formUnion(matchIDs)
-        } catch {
-            print("Failed to fetch matches for puuid: \(puuid)\nReason: \(error)")
-            failedPuuids.append(puuid)
-            continue
-        }
-        
-        // delay
-        try await Task.sleep(nanoseconds: 1400_000_000)
-        
-        // break condition
-        if allMatchIDs.count > 10000 {
-            print("Stopping: collected \(allMatchIDs.count) match IDs.")
-            break
-        }
-    }
-    
-    saveMatchIDs(Array(allMatchIDs))
-}
-
-/** Get and save matchInfo and timeline
- */
-func stage2() async throws {
-    let matchIds = try loadMatchId()
-    let maxInfo = 100;
-    var failedMatchIds = [String]()
-    var count = 0;
-    for matchId in matchIds {
-        
-        // Get match info
-        do {
-            
-            let matchInfo = try await fetchMatchInfo(matchId: matchId)
-            try await Task.sleep(nanoseconds: 1400_000_000)
-            
-            let matchTimeline = try await fetchTimeline(matchId)
-            try await Task.sleep(nanoseconds: 1400_000_000)
-            
-            if matchInfo.info.gameMode != "CLASSIC" {
-                continue
-            }
-            
-            count += 1
-            saveMatchInfo(matchId, matchInfo)
-            
-            saveTimeline(matchId, matchTimeline)
-            print("\(count*100/maxInfo)%")
-        } catch {
-            print("Failed to fetch match info and timeline for matchID: \(matchId)\nReason: \(error)")
-            failedMatchIds.append(matchId)
-            continue
-        }
-        
-        // delay
-        
-        
-        if count >= maxInfo {
-            print("Stopping: collected \(count) match info.")
-            break;
-        }
-    }
-}
 
 //
 // Stage 3 - Analyze match info & timelines, aggregate into ChampionStats
@@ -112,22 +28,34 @@ func stage3() async throws {
     var count = 0
     let limit = 100 // bind dnumber of match id that would be aggregated.
     let summonerSpellLookupTable = try loadSummonerSpells()
+    let version = try await fetchVersion()
+    
+    /// the reason why I should use this variable is that championName from match history
+    /// and championID in ddragon don't match.
+    let championList = try await fetchChampionList(version)
+    let lookup = buildChampionLookup(championList)
     
     for matchId in matchIds {
         if count >= limit { break }
+
+        
         // load
         guard let matchInfo = try? loadMatchInfo(matchId),
            let timeline = try? loadTimeline(matchId) else {
-            //print("Skipping \(matchId) - missing matchInfo or timeline file")
             continue
         }
         
-        //print("Opening match \(matchId) timeline and match info...")
         
-        // Map puuid -> champion Name
+        // Map puuid -> champion id
         var championByPuuid: [String:String] = [:]     // [puuid : champion name]
         for p in matchInfo.info.participants {
-            championByPuuid[p.puuid] = p.championName
+            let sanitizedName = p.championName.lowercased().filter { $0.isLetter }
+            let championData = lookup[sanitizedName]
+            let championId = championData?.id ?? "unknown"
+            
+            championByPuuid[p.puuid] = championId
+
+            // summoner spells
             var spells = Set<String>()
             if let s1 = summonerSpellLookupTable[p.summoner1Id],
                let s2 = summonerSpellLookupTable[p.summoner2Id] {
@@ -138,14 +66,21 @@ func stage3() async throws {
             }
             
             //Aggregate champion stats from MatchDto
-            if let bucket = champions[p.championName] {
+            if let bucket = champions[championId] {
                 bucket.addMatch(participant: p)
                 bucket.addSummonerSpell(spells)
             } else {
-                let bucket = ChampionStats(championName: p.championName)
+                let normalized = p.championName.lowercased().filter { $0.isLetter }
+                guard let champData = lookup[normalized] else {
+                    print(" Could not resolve matchinfo of champion: \(p.championName)")
+                    continue
+                }
+                
+                let detail = try await fetchChampion(name: champData.id, version: version)
+                let bucket = ChampionStats(championName: champData.name, id: champData.id, version: version, championDetail: detail)
                 bucket.addMatch(participant: p)
                 bucket.addSummonerSpell(spells)
-                champions[bucket.championName] = bucket
+                champions[championId] = bucket
             }
         }
         
@@ -157,21 +92,21 @@ func stage3() async throws {
             }
         }
         
-        // Build per-champoin ordered item sequence for this match
-        // [ChampName : [itemId : timestamp]
         
+        // ITEM
+        // Build per-champoin ordered item sequence for this match
         var championItemBuild: [String:[Purchase]] = [:]
         
         // Flatten. sort by time, and pre-filter to events we care about
         let events = timeline.info.frames
             .flatMap(\.events)
             .sorted{ $0.timestamp < $1.timestamp }
-            .filter { $0.type == "ITEM_PURCHASED" || $0.type == "ITEM_UNDO"}
-        
+            .filter { $0.type == "ITEM_PURCHASED" || $0.type == "ITEM_UNDO" || $0.type == "ITEM_DESTROYED"}
+                
         for e in events {
             guard let pid = e.participantId,
                   let champ = championByParticipantId[pid] else { continue }
-            
+                
             switch e.type {
             case "ITEM_PURCHASED":
                 if let id = e.itemId {
@@ -185,19 +120,41 @@ func stage3() async throws {
                     championItemBuild[champ] = seq
                 }
                 
+            case "ITEM_DESTROYED":
+                // "Wolrd Atlas" for support item
+                if let id = e.itemId, id == 3865 {
+                    if var seq = championItemBuild[champ] {
+                        // only insert if it's not already in the sequence
+                        if !seq.contains(where: { $0.id == 3865}) {
+                            seq.insert((id: id, ts: 0), at: 0)
+                            championItemBuild[champ] = seq
+                        }
+                    } else {
+                        championItemBuild[champ] = [(id: id, ts: 0)]
+                    }
+                }
+                
             default:
                 break
             }
         }
         
-        //TODO: call ingestBuildsequence
+        // call ingestBuildsequence
         let fileURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Documents/lol_data/ddragon/item.json")
         try ItemIndex.shared.load(from: fileURL)
         for champ in championItemBuild.keys {
             if let bucket = champions[champ] {
                 bucket.ingestBuildSequence(championItemBuild[champ] ?? [])
             } else {
-                let bucket = ChampionStats(championName: champ)
+                let normalized = champ.lowercased().filter { $0.isLetter }
+                guard let champData = lookup[normalized] else {
+                    print(" Could not resolve timeline of champion: \(champ)")
+                    continue
+                }
+                
+                let detail = try await fetchChampion(name: champData.id, version: version)
+                let bucket = ChampionStats(championName: champData.name, id: champData.id, version: version, championDetail: detail)
+                
                 bucket.ingestBuildSequence(championItemBuild[champ] ?? [])
                 champions[bucket.championName] = bucket
             }
@@ -213,11 +170,3 @@ func stage3() async throws {
     }
 
 }
-
-
-//
-//func stage4() async throws {
-//    let data = try await fetchTimeline("NA1_5313388433")
-//    saveTimeline(data)
-//}
-

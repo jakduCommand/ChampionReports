@@ -21,10 +21,10 @@ Because the data is stored as static JSON files, applications can load champion 
 ```
 ChampionReports/ 
 ├── BR1/ 
-├── tier/ 
-│ │ ├── 1.json 
-│ │ ├── 2.json 
-│ │ └── ...
+│  ├── tier/ 
+│  │  ├── 1.json 
+│  │  ├── 2.json 
+│  │  └── ...
 ```
 ## Regions
 

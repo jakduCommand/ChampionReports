@@ -18,7 +18,12 @@ Because the data is stored as static JSON files, applications can load champion 
 
 ## Repository Structure
 
-ChampionReports/Server/tier/1.json...
+ChampionReports/ 
+├── BR1/ 
+├── tier/ 
+│ │ ├── 1.json 
+│ │ ├── 2.json 
+│ │ └── ...
 
 ## Regions
 

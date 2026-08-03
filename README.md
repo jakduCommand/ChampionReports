@@ -16,27 +16,70 @@ The repository serves as a static data source for champion statistics, allowing 
 
 Because the data is stored as static JSON files, applications can load champion information directly from GitHub without maintaining there own backend server.
 
-Repository Structure
+## Repository Structure
 
 ChampionReports/Server/tier/1.json...
 
-Regions
+## Regions
 
 Each top-level directory represents a Riot server.
-Example:
-BR1
-EUN1
-EUW1
-JP1
-KR
-LA1
-LA2
-ME1
-NA1
-OC1
-RU
-SG2
-TR1
-TW2
-VN2
 
+Example:
+1. BR1
+2. EUN1
+3. EUW1
+4. JP1
+5. KR
+6. LA1
+7. LA2
+8. ME1
+9. NA1
+10. OC1
+11. RU
+12. SG2
+13. TR1
+14. TW2
+15. VN2
+
+## Champion Files
+
+Each JSON file represents the aggregated statistics for a single champion.
+
+Example:
+
+KR1/Diamond/Aatrox.json
+
+where:
+* ```KR``` = Korea server
+* ```Diamond``` = tier
+* ```Aatrox``` = Champion's name
+
+## Data Generation
+
+The data is generated using the LeagueOfLegendsData project, which:
+
+1. Collects ranked match data from the Riot Games API.
+2. Processes match and timeline information.
+3. Aggregates champions statistics.
+4. Exports one JSON file per champion.
+
+This repository only store the generated output.
+
+## Intended Usage
+
+Application can retrieve champion data directly from GitHub, for example:
+https://raw.githubusercontent.com/jakduCommand/ChampionReports/main/KR/Diamond/Aatrox.json
+
+This approach provides:
+
+* Fast static file hosting
+* No backend infrastructure
+* Easy update through Git
+* Version-controlled datasets
+
+## Notes
+
+* Data is periodically regenerated.
+* Statistics are aggregated from ranked solo queue matches.
+* Champion IDs follow Riot Games' official champion IDs.
+* File formats may evolves an new statistics are added

@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files for directories
+Icon\r
+
+# Thumbnails and filesystem metadata
+._*
+.Spotlight-V100
+.Trashes

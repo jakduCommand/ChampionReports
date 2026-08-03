@@ -18,13 +18,14 @@ Because the data is stored as static JSON files, applications can load champion 
 
 ## Repository Structure
 
+```
 ChampionReports/ 
 ├── BR1/ 
 ├── tier/ 
 │ │ ├── 1.json 
 │ │ ├── 2.json 
 │ │ └── ...
-
+```
 ## Regions
 
 Each top-level directory represents a Riot server.

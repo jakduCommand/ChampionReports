@@ -265,7 +265,7 @@
       "primary" : {
         "perk1Id" : 8465,
         "perk2Id" : 8463,
-        "perk3Id" : 8444,
+        "perk3Id" : 8473,
         "perk4Id" : 8242,
         "styleId" : 8400
       },
@@ -295,7 +295,7 @@
       "primary" : {
         "perk1Id" : 8465,
         "perk2Id" : 8463,
-        "perk3Id" : 8473,
+        "perk3Id" : 8444,
         "perk4Id" : 8242,
         "styleId" : 8400
       },
@@ -314,7 +314,7 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 14,
+      "spell1Id" : 7,
       "spell2Id" : 4
     },
     {
@@ -324,7 +324,7 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 7,
+      "spell1Id" : 14,
       "spell2Id" : 4
     }
   ]

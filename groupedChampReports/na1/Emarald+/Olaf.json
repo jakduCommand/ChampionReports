@@ -1,0 +1,168 @@
+{
+  "boots" : [
+    {
+      "bootId" : 3047,
+      "games" : 1
+    }
+  ],
+  "championId" : 2,
+  "championName" : "Olaf",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 1,
+      "minute" : 1,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 2,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 3,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 4,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 5,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 6,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 7,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 8,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 9,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 10,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 11,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 12,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 13,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 14,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 15,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 16,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 17,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 18,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 19,
+      "wins" : 1
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 1,
+        "itemId" : 6631
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 1,
+        "itemId" : 3073
+      }
+    ],
+    "core3" : [
+
+    ],
+    "core4" : [
+
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 240,
+      "wins" : 1
+    }
+  ],
+  "performance" : {
+    "games" : 1,
+    "wins" : 1
+  },
+  "runes" : [
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8010,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8410,
+        "perk2Id" : 8306,
+        "styleId" : 8300
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 1,
+      "spell1Id" : 6,
+      "spell2Id" : 4
+    }
+  ]
+}

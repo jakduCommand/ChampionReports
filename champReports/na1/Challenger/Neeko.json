@@ -215,11 +215,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3165
+        "itemId" : 8020
       },
       {
         "games" : 1,
-        "itemId" : 8020
+        "itemId" : 3165
       },
       {
         "games" : 1,
@@ -254,7 +254,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 60,
+      "opponentChampionId" : 25,
       "wins" : 1
     },
     {
@@ -264,7 +264,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 25,
+      "opponentChampionId" : 60,
       "wins" : 1
     },
     {
@@ -274,12 +274,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 235,
-      "wins" : 0
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 267,
+      "opponentChampionId" : 37,
       "wins" : 0
     },
     {
@@ -289,12 +284,17 @@
     },
     {
       "games" : 1,
+      "opponentChampionId" : 267,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
       "opponentChampionId" : 117,
       "wins" : 0
     },
     {
       "games" : 1,
-      "opponentChampionId" : 37,
+      "opponentChampionId" : 235,
       "wins" : 0
     }
   ],

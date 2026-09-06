@@ -167,11 +167,11 @@
     "core2" : [
       {
         "games" : 2,
-        "itemId" : 6610
+        "itemId" : 6333
       },
       {
         "games" : 2,
-        "itemId" : 6333
+        "itemId" : 6610
       }
     ],
     "core3" : [
@@ -227,9 +227,39 @@
         "styleId" : 8400
       },
       "secondary" : {
+        "perk1Id" : 8347,
+        "perk2Id" : 8313,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8437,
+        "perk2Id" : 8446,
+        "perk3Id" : 8444,
+        "perk4Id" : 8453,
+        "styleId" : 8400
+      },
+      "secondary" : {
         "perk1Id" : 8313,
         "perk2Id" : 8347,
         "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8010,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8473,
+        "perk2Id" : 8453,
+        "styleId" : 8400
       }
     },
     {
@@ -259,36 +289,6 @@
       "secondary" : {
         "perk1Id" : 8444,
         "perk2Id" : 8451,
-        "styleId" : 8400
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8437,
-        "perk2Id" : 8446,
-        "perk3Id" : 8444,
-        "perk4Id" : 8453,
-        "styleId" : 8400
-      },
-      "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8313,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8010,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
-        "perk4Id" : 8299,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8473,
-        "perk2Id" : 8453,
         "styleId" : 8400
       }
     }

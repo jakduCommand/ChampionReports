@@ -172,15 +172,15 @@
     "core2" : [
       {
         "games" : 1,
+        "itemId" : 4629
+      },
+      {
+        "games" : 1,
         "itemId" : 3109
       },
       {
         "games" : 1,
         "itemId" : 3119
-      },
-      {
-        "games" : 1,
-        "itemId" : 4629
       }
     ],
     "core3" : [
@@ -206,23 +206,13 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 236,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 147,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 432,
-      "wins" : 0
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 111,
-      "wins" : 0
+      "opponentChampionId" : 236,
+      "wins" : 1
     },
     {
       "games" : 1,
@@ -233,6 +223,16 @@
       "games" : 1,
       "opponentChampionId" : 30,
       "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 432,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 111,
+      "wins" : 0
     }
   ],
   "performance" : {
@@ -240,21 +240,6 @@
     "wins" : 2
   },
   "runes" : [
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8214,
-        "perk2Id" : 8226,
-        "perk3Id" : 8210,
-        "perk4Id" : 8237,
-        "styleId" : 8200
-      },
-      "secondary" : {
-        "perk1Id" : 8313,
-        "perk2Id" : 8321,
-        "styleId" : 8300
-      }
-    },
     {
       "games" : 1,
       "primary" : {
@@ -291,6 +276,21 @@
         "perk1Id" : 8214,
         "perk2Id" : 8226,
         "perk3Id" : 8210,
+        "perk4Id" : 8232,
+        "styleId" : 8200
+      },
+      "secondary" : {
+        "perk1Id" : 8347,
+        "perk2Id" : 8313,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8214,
+        "perk2Id" : 8226,
+        "perk3Id" : 8210,
         "perk4Id" : 8236,
         "styleId" : 8200
       },
@@ -306,12 +306,12 @@
         "perk1Id" : 8214,
         "perk2Id" : 8226,
         "perk3Id" : 8210,
-        "perk4Id" : 8232,
+        "perk4Id" : 8237,
         "styleId" : 8200
       },
       "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8313,
+        "perk1Id" : 8313,
+        "perk2Id" : 8321,
         "styleId" : 8300
       }
     },

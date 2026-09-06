@@ -211,11 +211,11 @@
     "core3" : [
       {
         "games" : 2,
-        "itemId" : 3814
+        "itemId" : 6694
       },
       {
         "games" : 2,
-        "itemId" : 6694
+        "itemId" : 3814
       },
       {
         "games" : 1,
@@ -223,11 +223,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 6695
+        "itemId" : 3033
       },
       {
         "games" : 1,
-        "itemId" : 3033
+        "itemId" : 6695
       }
     ],
     "core4" : [
@@ -237,11 +237,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3033
+        "itemId" : 6695
       },
       {
         "games" : 1,
-        "itemId" : 6695
+        "itemId" : 3033
       }
     ],
     "core5" : [

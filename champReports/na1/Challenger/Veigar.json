@@ -189,11 +189,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 6655
+        "itemId" : 3003
       },
       {
         "games" : 1,
-        "itemId" : 3003
+        "itemId" : 6655
       }
     ],
     "core2" : [
@@ -203,11 +203,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3137
+        "itemId" : 3152
       },
       {
         "games" : 1,
-        "itemId" : 3152
+        "itemId" : 3137
       }
     ],
     "core3" : [
@@ -232,6 +232,11 @@
   "matchups" : [
     {
       "games" : 1,
+      "opponentChampionId" : 55,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
       "opponentChampionId" : 517,
       "wins" : 1
     },
@@ -241,23 +246,18 @@
       "wins" : 1
     },
     {
-      "games" : 1,
-      "opponentChampionId" : 55,
-      "wins" : 1
-    },
-    {
       "games" : 2,
       "opponentChampionId" : 236,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 240,
+      "opponentChampionId" : 30,
       "wins" : 0
     },
     {
       "games" : 1,
-      "opponentChampionId" : 30,
+      "opponentChampionId" : 240,
       "wins" : 0
     }
   ],
@@ -279,21 +279,6 @@
         "perk1Id" : 8226,
         "perk2Id" : 8210,
         "styleId" : 8200
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8229,
-        "perk2Id" : 8226,
-        "perk3Id" : 8210,
-        "perk4Id" : 8237,
-        "styleId" : 8200
-      },
-      "secondary" : {
-        "perk1Id" : 9105,
-        "perk2Id" : 8017,
-        "styleId" : 8000
       }
     },
     {
@@ -329,6 +314,21 @@
     {
       "games" : 1,
       "primary" : {
+        "perk1Id" : 8229,
+        "perk2Id" : 8226,
+        "perk3Id" : 8210,
+        "perk4Id" : 8237,
+        "styleId" : 8200
+      },
+      "secondary" : {
+        "perk1Id" : 9105,
+        "perk2Id" : 8017,
+        "styleId" : 8000
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
         "perk1Id" : 8369,
         "perk2Id" : 8321,
         "perk3Id" : 8313,
@@ -345,13 +345,13 @@
   "summonerSpells" : [
     {
       "games" : 3,
-      "spell1Id" : 4,
-      "spell2Id" : 12
+      "spell1Id" : 12,
+      "spell2Id" : 4
     },
     {
       "games" : 3,
-      "spell1Id" : 12,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 12
     },
     {
       "games" : 1,

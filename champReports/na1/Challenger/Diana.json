@@ -149,11 +149,11 @@
     "core2" : [
       {
         "games" : 1,
-        "itemId" : 3152
+        "itemId" : 4633
       },
       {
         "games" : 1,
-        "itemId" : 4633
+        "itemId" : 3152
       }
     ],
     "core3" : [
@@ -178,12 +178,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 203,
+      "opponentChampionId" : 107,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 107,
+      "opponentChampionId" : 203,
       "wins" : 1
     }
   ],
@@ -202,8 +202,8 @@
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8304,
-        "perk2Id" : 8347,
+        "perk1Id" : 8347,
+        "perk2Id" : 8304,
         "styleId" : 8300
       }
     },
@@ -217,8 +217,8 @@
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8304,
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
         "styleId" : 8300
       }
     }

@@ -137,21 +137,21 @@
     "core1" : [
       {
         "games" : 1,
-        "itemId" : 6653
+        "itemId" : 3142
       },
       {
         "games" : 1,
-        "itemId" : 3142
+        "itemId" : 6653
       }
     ],
     "core2" : [
       {
         "games" : 1,
-        "itemId" : 3118
+        "itemId" : 6676
       },
       {
         "games" : 1,
-        "itemId" : 6676
+        "itemId" : 3118
       }
     ],
     "core3" : [

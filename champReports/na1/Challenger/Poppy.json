@@ -5,11 +5,11 @@
       "games" : 2
     },
     {
-      "bootId" : 3009,
+      "bootId" : 3111,
       "games" : 1
     },
     {
-      "bootId" : 3111,
+      "bootId" : 3009,
       "games" : 1
     }
   ],
@@ -185,7 +185,7 @@
       },
       {
         "games" : 1,
-        "itemId" : 3179
+        "itemId" : 6692
       },
       {
         "games" : 1,
@@ -193,7 +193,7 @@
       },
       {
         "games" : 1,
-        "itemId" : 6692
+        "itemId" : 3179
       }
     ],
     "core2" : [
@@ -209,11 +209,11 @@
     "core3" : [
       {
         "games" : 1,
-        "itemId" : 2504
+        "itemId" : 3119
       },
       {
         "games" : 1,
-        "itemId" : 3119
+        "itemId" : 2504
       }
     ],
     "core4" : [
@@ -229,7 +229,7 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 799,
+      "opponentChampionId" : 81,
       "wins" : 1
     },
     {
@@ -239,7 +239,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 81,
+      "opponentChampionId" : 799,
       "wins" : 1
     },
     {

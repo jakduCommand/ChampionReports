@@ -231,21 +231,21 @@
     "core4" : [
       {
         "games" : 1,
-        "itemId" : 6695
+        "itemId" : 3036
       },
       {
         "games" : 1,
-        "itemId" : 3036
+        "itemId" : 6695
       }
     ],
     "core5" : [
       {
         "games" : 1,
-        "itemId" : 3814
+        "itemId" : 6695
       },
       {
         "games" : 1,
-        "itemId" : 6695
+        "itemId" : 3814
       }
     ],
     "core6" : [
@@ -255,12 +255,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 13,
+      "opponentChampionId" : 42,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 42,
+      "opponentChampionId" : 13,
       "wins" : 1
     },
     {
@@ -279,36 +279,6 @@
     "wins" : 2
   },
   "runes" : [
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8369,
-        "perk2Id" : 8321,
-        "perk3Id" : 8313,
-        "perk4Id" : 8316,
-        "styleId" : 8300
-      },
-      "secondary" : {
-        "perk1Id" : 9105,
-        "perk2Id" : 8017,
-        "styleId" : 8000
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8369,
-        "perk2Id" : 8321,
-        "perk3Id" : 8313,
-        "perk4Id" : 8347,
-        "styleId" : 8300
-      },
-      "secondary" : {
-        "perk1Id" : 9105,
-        "perk2Id" : 8017,
-        "styleId" : 8000
-      }
-    },
     {
       "games" : 1,
       "primary" : {
@@ -337,6 +307,36 @@
         "perk1Id" : 8275,
         "perk2Id" : 8210,
         "styleId" : 8200
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8369,
+        "perk2Id" : 8321,
+        "perk3Id" : 8313,
+        "perk4Id" : 8316,
+        "styleId" : 8300
+      },
+      "secondary" : {
+        "perk1Id" : 9105,
+        "perk2Id" : 8017,
+        "styleId" : 8000
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8369,
+        "perk2Id" : 8321,
+        "perk3Id" : 8313,
+        "perk4Id" : 8347,
+        "styleId" : 8300
+      },
+      "secondary" : {
+        "perk1Id" : 9105,
+        "perk2Id" : 8017,
+        "styleId" : 8000
       }
     }
   ],

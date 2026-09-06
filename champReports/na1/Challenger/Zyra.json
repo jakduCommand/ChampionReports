@@ -232,12 +232,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 64,
+      "opponentChampionId" : 221,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 221,
+      "opponentChampionId" : 64,
       "wins" : 1
     },
     {

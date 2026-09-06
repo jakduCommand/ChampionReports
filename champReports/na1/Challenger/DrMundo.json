@@ -220,17 +220,17 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 60,
-      "wins" : 0
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 113,
       "wins" : 0
     },
     {
       "games" : 1,
       "opponentChampionId" : 950,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 60,
       "wins" : 0
     },
     {
@@ -299,12 +299,12 @@
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 7
+      "spell2Id" : 11
     },
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 11
+      "spell2Id" : 7
     }
   ]
 }

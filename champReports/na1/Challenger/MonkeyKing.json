@@ -1,11 +1,11 @@
 {
   "boots" : [
     {
-      "bootId" : 3111,
+      "bootId" : 3047,
       "games" : 1
     },
     {
-      "bootId" : 3047,
+      "bootId" : 3111,
       "games" : 1
     }
   ],
@@ -247,12 +247,12 @@
         "perk1Id" : 8010,
         "perk2Id" : 9111,
         "perk3Id" : 9104,
-        "perk4Id" : 8017,
+        "perk4Id" : 8014,
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8304,
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
         "styleId" : 8300
       }
     },
@@ -262,12 +262,12 @@
         "perk1Id" : 8010,
         "perk2Id" : 9111,
         "perk3Id" : 9104,
-        "perk4Id" : 8014,
+        "perk4Id" : 8017,
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8304,
-        "perk2Id" : 8347,
+        "perk1Id" : 8347,
+        "perk2Id" : 8304,
         "styleId" : 8300
       }
     }
@@ -275,13 +275,13 @@
   "summonerSpells" : [
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 11
+      "spell1Id" : 11,
+      "spell2Id" : 4
     },
     {
       "games" : 1,
-      "spell1Id" : 11,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 11
     }
   ]
 }

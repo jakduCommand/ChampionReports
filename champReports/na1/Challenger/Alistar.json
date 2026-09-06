@@ -205,15 +205,15 @@
     "core2" : [
       {
         "games" : 1,
-        "itemId" : 3109
-      },
-      {
-        "games" : 1,
         "itemId" : 2525
       },
       {
         "games" : 1,
         "itemId" : 3050
+      },
+      {
+        "games" : 1,
+        "itemId" : 3109
       }
     ],
     "core3" : [
@@ -249,12 +249,12 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 267,
+      "opponentChampionId" : 518,
       "wins" : 0
     },
     {
       "games" : 1,
-      "opponentChampionId" : 518,
+      "opponentChampionId" : 267,
       "wins" : 0
     }
   ],
@@ -276,21 +276,6 @@
         "perk1Id" : 8347,
         "perk2Id" : 8306,
         "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8351,
-        "perk2Id" : 8306,
-        "perk3Id" : 8345,
-        "perk4Id" : 8347,
-        "styleId" : 8300
-      },
-      "secondary" : {
-        "perk1Id" : 8473,
-        "perk2Id" : 8242,
-        "styleId" : 8400
       }
     },
     {
@@ -322,6 +307,21 @@
         "perk2Id" : 8234,
         "styleId" : 8200
       }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8351,
+        "perk2Id" : 8306,
+        "perk3Id" : 8345,
+        "perk4Id" : 8347,
+        "styleId" : 8300
+      },
+      "secondary" : {
+        "perk1Id" : 8473,
+        "perk2Id" : 8242,
+        "styleId" : 8400
+      }
     }
   ],
   "summonerSpells" : [
@@ -332,8 +332,8 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 14,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 7
     },
     {
       "games" : 1,
@@ -342,8 +342,8 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 7
+      "spell1Id" : 14,
+      "spell2Id" : 4
     }
   ]
 }

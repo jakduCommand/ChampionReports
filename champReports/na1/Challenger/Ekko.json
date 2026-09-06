@@ -158,11 +158,11 @@
     "core3" : [
       {
         "games" : 1,
-        "itemId" : 3041
+        "itemId" : 3152
       },
       {
         "games" : 1,
-        "itemId" : 3152
+        "itemId" : 3041
       }
     ],
     "core4" : [
@@ -205,7 +205,7 @@
       "primary" : {
         "perk1Id" : 8128,
         "perk2Id" : 8143,
-        "perk3Id" : 8140,
+        "perk3Id" : 8141,
         "perk4Id" : 8135,
         "styleId" : 8100
       },
@@ -220,7 +220,7 @@
       "primary" : {
         "perk1Id" : 8128,
         "perk2Id" : 8143,
-        "perk3Id" : 8141,
+        "perk3Id" : 8140,
         "perk4Id" : 8135,
         "styleId" : 8100
       },

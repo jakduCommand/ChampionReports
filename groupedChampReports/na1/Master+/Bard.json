@@ -1,0 +1,388 @@
+{
+  "boots" : [
+    {
+      "bootId" : 3009,
+      "games" : 3
+    },
+    {
+      "bootId" : 3158,
+      "games" : 2
+    },
+    {
+      "bootId" : 3111,
+      "games" : 2
+    },
+    {
+      "bootId" : 3047,
+      "games" : 1
+    }
+  ],
+  "championId" : 432,
+  "championName" : "Bard",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 8,
+      "minute" : 1,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 2,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 3,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 4,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 5,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 6,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 7,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 8,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 9,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 10,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 11,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 12,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 13,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 14,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 15,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 16,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 17,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 18,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 19,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 20,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 21,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 22,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 23,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 24,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 25,
+      "wins" : 5
+    },
+    {
+      "games" : 8,
+      "minute" : 26,
+      "wins" : 5
+    },
+    {
+      "games" : 7,
+      "minute" : 27,
+      "wins" : 4
+    },
+    {
+      "games" : 7,
+      "minute" : 28,
+      "wins" : 4
+    },
+    {
+      "games" : 7,
+      "minute" : 29,
+      "wins" : 4
+    },
+    {
+      "games" : 6,
+      "minute" : 30,
+      "wins" : 3
+    },
+    {
+      "games" : 3,
+      "minute" : 31,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 32,
+      "wins" : 0
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 3,
+        "itemId" : 3190
+      },
+      {
+        "games" : 2,
+        "itemId" : 2524
+      },
+      {
+        "games" : 2,
+        "itemId" : 3742
+      },
+      {
+        "games" : 1,
+        "itemId" : 3109
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 3,
+        "itemId" : 3190
+      },
+      {
+        "games" : 2,
+        "itemId" : 3107
+      },
+      {
+        "games" : 1,
+        "itemId" : 2524
+      },
+      {
+        "games" : 1,
+        "itemId" : 3742
+      },
+      {
+        "games" : 1,
+        "itemId" : 6620
+      }
+    ],
+    "core3" : [
+      {
+        "games" : 2,
+        "itemId" : 2524
+      },
+      {
+        "games" : 1,
+        "itemId" : 3222
+      }
+    ],
+    "core4" : [
+      {
+        "games" : 1,
+        "itemId" : 3190
+      }
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 117,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 111,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 26,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "opponentChampionId" : 518,
+      "wins" : 2
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 267,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 147,
+      "wins" : 0
+    }
+  ],
+  "performance" : {
+    "games" : 8,
+    "wins" : 5
+  },
+  "runes" : [
+    {
+      "games" : 3,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8126,
+        "perk3Id" : 8141,
+        "perk4Id" : 8105,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 2,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8126,
+        "perk3Id" : 8141,
+        "perk4Id" : 8105,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8347,
+        "perk2Id" : 8304,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8126,
+        "perk3Id" : 8141,
+        "perk4Id" : 8135,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8347,
+        "perk2Id" : 8304,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8126,
+        "perk3Id" : 8141,
+        "perk4Id" : 8105,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8234,
+        "perk2Id" : 8237,
+        "styleId" : 8200
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8139,
+        "perk3Id" : 8141,
+        "perk4Id" : 8106,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8226,
+        "perk2Id" : 8234,
+        "styleId" : 8200
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 2,
+      "spell1Id" : 14,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 2,
+      "spell1Id" : 4,
+      "spell2Id" : 7
+    },
+    {
+      "games" : 2,
+      "spell1Id" : 7,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 3
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 14
+    }
+  ]
+}

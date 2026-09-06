@@ -1,11 +1,11 @@
 {
   "boots" : [
     {
-      "bootId" : 3111,
+      "bootId" : 3047,
       "games" : 1
     },
     {
-      "bootId" : 3047,
+      "bootId" : 3111,
       "games" : 1
     }
   ],
@@ -198,12 +198,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 126,
+      "opponentChampionId" : 68,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 68,
+      "opponentChampionId" : 126,
       "wins" : 1
     }
   ],
@@ -246,13 +246,13 @@
   "summonerSpells" : [
     {
       "games" : 1,
-      "spell1Id" : 12,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 21
     },
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 21
+      "spell1Id" : 12,
+      "spell2Id" : 4
     }
   ]
 }

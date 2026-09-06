@@ -212,17 +212,17 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 20,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 134,
       "wins" : 1
     },
     {
       "games" : 1,
       "opponentChampionId" : 800,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 20,
       "wins" : 1
     }
   ],

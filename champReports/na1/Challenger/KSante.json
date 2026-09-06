@@ -1,11 +1,11 @@
 {
   "boots" : [
     {
-      "bootId" : 3009,
+      "bootId" : 3047,
       "games" : 1
     },
     {
-      "bootId" : 3047,
+      "bootId" : 3009,
       "games" : 1
     }
   ],
@@ -188,11 +188,11 @@
     "core3" : [
       {
         "games" : 1,
-        "itemId" : 3143
+        "itemId" : 6665
       },
       {
         "games" : 1,
-        "itemId" : 6665
+        "itemId" : 3143
       }
     ],
     "core4" : [

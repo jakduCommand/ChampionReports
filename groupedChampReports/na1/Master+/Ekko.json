@@ -1,0 +1,261 @@
+{
+  "boots" : [
+    {
+      "bootId" : 3111,
+      "games" : 2
+    }
+  ],
+  "championId" : 245,
+  "championName" : "Ekko",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 3,
+      "minute" : 1,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 2,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 3,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 4,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 5,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 6,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 7,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 8,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 9,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 10,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 11,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 12,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 13,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 14,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 15,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 16,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 17,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 18,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 19,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 20,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 21,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 22,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 23,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 24,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 25,
+      "wins" : 0
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 2,
+        "itemId" : 3100
+      },
+      {
+        "games" : 1,
+        "itemId" : 2510
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 2,
+        "itemId" : 4645
+      },
+      {
+        "games" : 1,
+        "itemId" : 3152
+      }
+    ],
+    "core3" : [
+      {
+        "games" : 1,
+        "itemId" : 3152
+      },
+      {
+        "games" : 1,
+        "itemId" : 3041
+      }
+    ],
+    "core4" : [
+      {
+        "games" : 1,
+        "itemId" : 3089
+      }
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 127,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 104,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 163,
+      "wins" : 0
+    }
+  ],
+  "performance" : {
+    "games" : 3,
+    "wins" : 1
+  },
+  "runes" : [
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 9923,
+        "perk2Id" : 8143,
+        "perk3Id" : 8137,
+        "perk4Id" : 8105,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8226,
+        "perk2Id" : 8237,
+        "styleId" : 8200
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8128,
+        "perk2Id" : 8143,
+        "perk3Id" : 8140,
+        "perk4Id" : 8135,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8128,
+        "perk2Id" : 8143,
+        "perk3Id" : 8141,
+        "perk4Id" : 8135,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
+        "styleId" : 8300
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 2,
+      "spell1Id" : 11,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 14,
+      "spell2Id" : 4
+    }
+  ]
+}

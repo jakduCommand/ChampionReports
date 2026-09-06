@@ -262,21 +262,6 @@
       "games" : 1,
       "primary" : {
         "perk1Id" : 8008,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
-        "perk4Id" : 8299,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8429,
-        "perk2Id" : 8451,
-        "styleId" : 8400
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
         "perk2Id" : 9101,
         "perk3Id" : 9104,
         "perk4Id" : 8017,
@@ -287,14 +272,24 @@
         "perk2Id" : 8347,
         "styleId" : 8300
       }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8429,
+        "perk2Id" : 8451,
+        "styleId" : 8400
+      }
     }
   ],
   "summonerSpells" : [
-    {
-      "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 6
-    },
     {
       "games" : 1,
       "spell1Id" : 4,
@@ -304,6 +299,11 @@
       "games" : 1,
       "spell1Id" : 21,
       "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 6
     }
   ]
 }

@@ -217,7 +217,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 904,
+      "opponentChampionId" : 106,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 58,
       "wins" : 1
     },
     {
@@ -227,12 +232,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 106,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 58,
+      "opponentChampionId" : 904,
       "wins" : 1
     },
     {
@@ -249,30 +249,15 @@
     {
       "games" : 1,
       "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 8009,
-        "perk3Id" : 9104,
-        "perk4Id" : 8299,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8473,
-        "perk2Id" : 8451,
-        "styleId" : 8400
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
         "perk1Id" : 8437,
         "perk2Id" : 8446,
         "perk3Id" : 8444,
-        "perk4Id" : 8451,
+        "perk4Id" : 8242,
         "styleId" : 8400
       },
       "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8313,
+        "perk1Id" : 8345,
+        "perk2Id" : 8347,
         "styleId" : 8300
       }
     },
@@ -289,6 +274,21 @@
         "perk1Id" : 8347,
         "perk2Id" : 8313,
         "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 8009,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8473,
+        "perk2Id" : 8451,
+        "styleId" : 8400
       }
     },
     {
@@ -312,12 +312,12 @@
         "perk1Id" : 8437,
         "perk2Id" : 8446,
         "perk3Id" : 8444,
-        "perk4Id" : 8242,
+        "perk4Id" : 8451,
         "styleId" : 8400
       },
       "secondary" : {
-        "perk1Id" : 8345,
-        "perk2Id" : 8347,
+        "perk1Id" : 8347,
+        "perk2Id" : 8313,
         "styleId" : 8300
       }
     }

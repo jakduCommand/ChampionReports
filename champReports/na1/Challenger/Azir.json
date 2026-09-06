@@ -216,11 +216,11 @@
     "core3" : [
       {
         "games" : 2,
-        "itemId" : 3157
+        "itemId" : 3089
       },
       {
         "games" : 2,
-        "itemId" : 3089
+        "itemId" : 3157
       },
       {
         "games" : 1,
@@ -259,7 +259,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 134,
+      "opponentChampionId" : 893,
       "wins" : 1
     },
     {
@@ -269,7 +269,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 893,
+      "opponentChampionId" : 134,
       "wins" : 1
     },
     {
@@ -284,7 +284,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 163,
+      "opponentChampionId" : 3,
       "wins" : 0
     },
     {
@@ -294,7 +294,7 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 3,
+      "opponentChampionId" : 163,
       "wins" : 0
     }
   ],
@@ -316,6 +316,36 @@
         "perk1Id" : 8226,
         "perk2Id" : 8237,
         "styleId" : 8200
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8437,
+        "perk2Id" : 8446,
+        "perk3Id" : 8473,
+        "perk4Id" : 8451,
+        "styleId" : 8400
+      },
+      "secondary" : {
+        "perk1Id" : 8009,
+        "perk2Id" : 9104,
+        "styleId" : 8000
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 8009,
+        "perk3Id" : 9104,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8473,
+        "perk2Id" : 8451,
+        "styleId" : 8400
       }
     },
     {
@@ -361,36 +391,6 @@
         "perk1Id" : 8210,
         "perk2Id" : 8237,
         "styleId" : 8200
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 8009,
-        "perk3Id" : 9104,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8473,
-        "perk2Id" : 8451,
-        "styleId" : 8400
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8437,
-        "perk2Id" : 8446,
-        "perk3Id" : 8473,
-        "perk4Id" : 8451,
-        "styleId" : 8400
-      },
-      "secondary" : {
-        "perk1Id" : 8009,
-        "perk2Id" : 9104,
-        "styleId" : 8000
       }
     }
   ],

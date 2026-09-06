@@ -207,11 +207,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3046
+        "itemId" : 3085
       },
       {
         "games" : 1,
-        "itemId" : 3085
+        "itemId" : 3046
       }
     ],
     "core3" : [
@@ -239,11 +239,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 6673
+        "itemId" : 2523
       },
       {
         "games" : 1,
-        "itemId" : 2523
+        "itemId" : 6673
       }
     ],
     "core5" : [
@@ -259,11 +259,6 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 429,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 22,
       "wins" : 1
     },
@@ -275,6 +270,11 @@
     {
       "games" : 1,
       "opponentChampionId" : 81,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 429,
       "wins" : 1
     },
     {
@@ -299,17 +299,17 @@
     },
     {
       "games" : 1,
+      "opponentChampionId" : 96,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
       "opponentChampionId" : 103,
       "wins" : 0
     },
     {
       "games" : 1,
       "opponentChampionId" : 51,
-      "wins" : 0
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 96,
       "wins" : 0
     }
   ],
@@ -337,6 +337,66 @@
       "games" : 1,
       "primary" : {
         "perk1Id" : 8008,
+        "perk2Id" : 8009,
+        "perk3Id" : 9103,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8345,
+        "perk2Id" : 8347,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8321,
+        "perk2Id" : 8313,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 9111,
+        "perk3Id" : 9103,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8347,
+        "perk2Id" : 8321,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 8009,
+        "perk3Id" : 9103,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8313,
+        "perk2Id" : 8304,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
         "perk2Id" : 9101,
         "perk3Id" : 9104,
         "perk4Id" : 8017,
@@ -352,51 +412,6 @@
       "games" : 1,
       "primary" : {
         "perk1Id" : 8008,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8313,
-        "perk2Id" : 8347,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 8009,
-        "perk3Id" : 9103,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8345,
-        "perk2Id" : 8347,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8321,
-        "perk2Id" : 8313,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
         "perk2Id" : 8009,
         "perk3Id" : 9103,
         "perk4Id" : 8017,
@@ -405,51 +420,6 @@
       "secondary" : {
         "perk1Id" : 8321,
         "perk2Id" : 8347,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 9101,
-        "perk3Id" : 9103,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8321,
-        "perk2Id" : 8313,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8347,
-        "perk2Id" : 8313,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8008,
-        "perk2Id" : 9111,
-        "perk3Id" : 9103,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8345,
-        "perk2Id" : 8304,
         "styleId" : 8300
       }
     },
@@ -473,7 +443,7 @@
       "primary" : {
         "perk1Id" : 8008,
         "perk2Id" : 9111,
-        "perk3Id" : 9103,
+        "perk3Id" : 9104,
         "perk4Id" : 8017,
         "styleId" : 8000
       },
@@ -487,14 +457,14 @@
       "games" : 1,
       "primary" : {
         "perk1Id" : 8008,
-        "perk2Id" : 8009,
+        "perk2Id" : 9101,
         "perk3Id" : 9103,
         "perk4Id" : 8017,
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8313,
-        "perk2Id" : 8304,
+        "perk1Id" : 8321,
+        "perk2Id" : 8313,
         "styleId" : 8300
       }
     },
@@ -523,8 +493,38 @@
         "styleId" : 8000
       },
       "secondary" : {
+        "perk1Id" : 8345,
+        "perk2Id" : 8304,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
         "perk1Id" : 8347,
-        "perk2Id" : 8321,
+        "perk2Id" : 8313,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8008,
+        "perk2Id" : 9111,
+        "perk3Id" : 9103,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8313,
+        "perk2Id" : 8347,
         "styleId" : 8300
       }
     }
@@ -542,13 +542,13 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 6
+      "spell1Id" : 1,
+      "spell2Id" : 4
     },
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 1
+      "spell2Id" : 6
     },
     {
       "games" : 1,
@@ -557,8 +557,8 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 1,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 1
     }
   ]
 }

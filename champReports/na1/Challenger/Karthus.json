@@ -201,17 +201,7 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 202,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 126,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 157,
       "wins" : 1
     },
     {
@@ -221,12 +211,22 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 45,
+      "opponentChampionId" : 26,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 26,
+      "opponentChampionId" : 202,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 157,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 45,
       "wins" : 1
     },
     {
@@ -294,13 +294,13 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 3,
-      "spell2Id" : 11
+      "spell1Id" : 11,
+      "spell2Id" : 14
     },
     {
       "games" : 1,
-      "spell1Id" : 11,
-      "spell2Id" : 14
+      "spell1Id" : 3,
+      "spell2Id" : 11
     }
   ]
 }

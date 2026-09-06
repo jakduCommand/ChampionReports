@@ -212,11 +212,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3026
+        "itemId" : 3071
       },
       {
         "games" : 1,
-        "itemId" : 3071
+        "itemId" : 3026
       }
     ],
     "core4" : [
@@ -235,17 +235,7 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 121,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 59,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "opponentChampionId" : 80,
+      "opponentChampionId" : 254,
       "wins" : 1
     },
     {
@@ -255,7 +245,17 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 254,
+      "opponentChampionId" : 59,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 121,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 80,
       "wins" : 1
     },
     {
@@ -275,7 +275,7 @@
         "perk1Id" : 8010,
         "perk2Id" : 9111,
         "perk3Id" : 9104,
-        "perk4Id" : 8014,
+        "perk4Id" : 8017,
         "styleId" : 8000
       },
       "secondary" : {
@@ -290,27 +290,12 @@
         "perk1Id" : 8010,
         "perk2Id" : 9111,
         "perk3Id" : 9104,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8304,
-        "perk2Id" : 8347,
-        "styleId" : 8300
-      }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8010,
-        "perk2Id" : 9111,
-        "perk3Id" : 9104,
         "perk4Id" : 8014,
         "styleId" : 8000
       },
       "secondary" : {
         "perk1Id" : 8304,
-        "perk2Id" : 8410,
+        "perk2Id" : 8347,
         "styleId" : 8300
       }
     },
@@ -328,18 +313,33 @@
         "perk2Id" : 8304,
         "styleId" : 8300
       }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8010,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8014,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8304,
+        "perk2Id" : 8410,
+        "styleId" : 8300
+      }
     }
   ],
   "summonerSpells" : [
     {
       "games" : 3,
-      "spell1Id" : 4,
-      "spell2Id" : 11
+      "spell1Id" : 11,
+      "spell2Id" : 4
     },
     {
       "games" : 3,
-      "spell1Id" : 11,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 11
     }
   ]
 }

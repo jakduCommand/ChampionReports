@@ -239,9 +239,9 @@
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8444,
-        "perk2Id" : 8453,
-        "styleId" : 8400
+        "perk1Id" : 8321,
+        "perk2Id" : 8347,
+        "styleId" : 8300
       }
     },
     {
@@ -254,22 +254,22 @@
         "styleId" : 8000
       },
       "secondary" : {
-        "perk1Id" : 8321,
-        "perk2Id" : 8347,
-        "styleId" : 8300
+        "perk1Id" : 8444,
+        "perk2Id" : 8453,
+        "styleId" : 8400
       }
     }
   ],
   "summonerSpells" : [
     {
       "games" : 1,
-      "spell1Id" : 11,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 14
     },
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 14
+      "spell1Id" : 11,
+      "spell2Id" : 4
     }
   ]
 }

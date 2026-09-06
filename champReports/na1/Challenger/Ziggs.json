@@ -203,17 +203,17 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 523,
-      "wins" : 0
-    },
-    {
-      "games" : 1,
       "opponentChampionId" : 134,
       "wins" : 0
     },
     {
       "games" : 1,
       "opponentChampionId" : 110,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 523,
       "wins" : 0
     }
   ],
@@ -247,7 +247,7 @@
         "styleId" : 8200
       },
       "secondary" : {
-        "perk1Id" : 8347,
+        "perk1Id" : 8345,
         "perk2Id" : 8304,
         "styleId" : 8300
       }
@@ -262,7 +262,7 @@
         "styleId" : 8200
       },
       "secondary" : {
-        "perk1Id" : 8345,
+        "perk1Id" : 8347,
         "perk2Id" : 8304,
         "styleId" : 8300
       }

@@ -1,11 +1,11 @@
 {
   "boots" : [
     {
-      "bootId" : 3111,
+      "bootId" : 3047,
       "games" : 2
     },
     {
-      "bootId" : 3047,
+      "bootId" : 3111,
       "games" : 2
     }
   ],
@@ -176,11 +176,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 3161
+        "itemId" : 6631
       },
       {
         "games" : 1,
-        "itemId" : 6631
+        "itemId" : 3161
       }
     ],
     "core2" : [
@@ -190,25 +190,25 @@
       },
       {
         "games" : 1,
+        "itemId" : 6610
+      },
+      {
+        "games" : 1,
         "itemId" : 3071
       },
       {
         "games" : 1,
         "itemId" : 3161
-      },
-      {
-        "games" : 1,
-        "itemId" : 6610
       }
     ],
     "core3" : [
       {
         "games" : 1,
-        "itemId" : 3053
+        "itemId" : 6333
       },
       {
         "games" : 1,
-        "itemId" : 6333
+        "itemId" : 3053
       }
     ],
     "core4" : [

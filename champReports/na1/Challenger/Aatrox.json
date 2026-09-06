@@ -191,11 +191,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 6610
+        "itemId" : 3161
       },
       {
         "games" : 1,
-        "itemId" : 3161
+        "itemId" : 6610
       }
     ],
     "core3" : [
@@ -229,12 +229,12 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 950,
+      "opponentChampionId" : 14,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 14,
+      "opponentChampionId" : 950,
       "wins" : 1
     }
   ],

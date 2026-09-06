@@ -5,11 +5,11 @@
       "games" : 2
     },
     {
-      "bootId" : 3111,
+      "bootId" : 3009,
       "games" : 1
     },
     {
-      "bootId" : 3009,
+      "bootId" : 3111,
       "games" : 1
     }
   ],
@@ -208,11 +208,11 @@
       },
       {
         "games" : 1,
-        "itemId" : 2510
+        "itemId" : 3065
       },
       {
         "games" : 1,
-        "itemId" : 3065
+        "itemId" : 2510
       }
     ],
     "core4" : [
@@ -231,12 +231,12 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 114,
+      "opponentChampionId" : 67,
       "wins" : 1
     },
     {
       "games" : 1,
-      "opponentChampionId" : 67,
+      "opponentChampionId" : 114,
       "wins" : 1
     },
     {
@@ -246,12 +246,12 @@
     },
     {
       "games" : 1,
-      "opponentChampionId" : 24,
+      "opponentChampionId" : 99,
       "wins" : 0
     },
     {
       "games" : 1,
-      "opponentChampionId" : 99,
+      "opponentChampionId" : 24,
       "wins" : 0
     }
   ],
@@ -260,6 +260,21 @@
     "wins" : 3
   },
   "runes" : [
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8005,
+        "perk2Id" : 9111,
+        "perk3Id" : 9105,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8210,
+        "perk2Id" : 8275,
+        "styleId" : 8200
+      }
+    },
     {
       "games" : 1,
       "primary" : {
@@ -319,21 +334,6 @@
         "perk2Id" : 9105,
         "styleId" : 8000
       }
-    },
-    {
-      "games" : 1,
-      "primary" : {
-        "perk1Id" : 8005,
-        "perk2Id" : 9111,
-        "perk3Id" : 9105,
-        "perk4Id" : 8017,
-        "styleId" : 8000
-      },
-      "secondary" : {
-        "perk1Id" : 8210,
-        "perk2Id" : 8275,
-        "styleId" : 8200
-      }
     }
   ],
   "summonerSpells" : [
@@ -345,12 +345,12 @@
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 3
+      "spell2Id" : 12
     },
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 12
+      "spell2Id" : 3
     },
     {
       "games" : 1,

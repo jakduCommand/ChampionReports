@@ -278,13 +278,13 @@
     },
     {
       "games" : 1,
-      "spell1Id" : 4,
-      "spell2Id" : 6
+      "spell1Id" : 6,
+      "spell2Id" : 4
     },
     {
       "games" : 1,
-      "spell1Id" : 6,
-      "spell2Id" : 4
+      "spell1Id" : 4,
+      "spell2Id" : 6
     }
   ]
 }

@@ -1,7 +1,16 @@
 {
+  "bans" : 0,
   "boots" : [
     {
       "bootId" : 3047,
+      "games" : 1
+    },
+    {
+      "bootId" : 3158,
+      "games" : 1
+    },
+    {
+      "bootId" : 3009,
       "games" : 1
     }
   ],
@@ -9,158 +18,133 @@
   "championName" : "Maokai",
   "expectedWinRateByMinute" : [
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 1,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 2,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 3,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 4,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 5,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 6,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 7,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 8,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 9,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 10,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 11,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 12,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 13,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 14,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 15,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 3,
       "minute" : 16,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 2,
       "minute" : 17,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 2,
       "minute" : 18,
-      "wins" : 1
+      "wins" : 0
     },
     {
-      "games" : 1,
+      "games" : 2,
       "minute" : 19,
-      "wins" : 1
+      "wins" : 0
     },
     {
       "games" : 1,
       "minute" : 20,
-      "wins" : 1
+      "wins" : 0
     },
     {
       "games" : 1,
       "minute" : 21,
-      "wins" : 1
+      "wins" : 0
     },
     {
       "games" : 1,
       "minute" : 22,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 23,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 24,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 25,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 26,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 27,
-      "wins" : 1
-    },
-    {
-      "games" : 1,
-      "minute" : 28,
-      "wins" : 1
+      "wins" : 0
     }
   ],
   "items" : {
     "core1" : [
       {
         "games" : 1,
-        "itemId" : 3190
+        "itemId" : 3050
+      },
+      {
+        "games" : 1,
+        "itemId" : 3109
+      },
+      {
+        "games" : 1,
+        "itemId" : 3068
       }
     ],
     "core2" : [
-      {
-        "games" : 1,
-        "itemId" : 2524
-      }
+
     ],
     "core3" : [
 
@@ -178,28 +162,68 @@
   "matchups" : [
     {
       "games" : 1,
-      "opponentChampionId" : 235,
-      "wins" : 1
+      "opponentChampionId" : 897,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 89,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 201,
+      "wins" : 0
     }
   ],
   "performance" : {
-    "games" : 1,
-    "wins" : 1
+    "games" : 3,
+    "wins" : 0
   },
   "runes" : [
     {
       "games" : 1,
       "primary" : {
+        "perk1Id" : 8360,
+        "perk2Id" : 8306,
+        "perk3Id" : 8345,
+        "perk4Id" : 8347,
+        "styleId" : 8300
+      },
+      "secondary" : {
+        "perk1Id" : 8473,
+        "perk2Id" : 8453,
+        "styleId" : 8400
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
         "perk1Id" : 8439,
         "perk2Id" : 8463,
-        "perk3Id" : 8444,
+        "perk3Id" : 8473,
         "perk4Id" : 8242,
         "styleId" : 8400
       },
       "secondary" : {
-        "perk1Id" : 8306,
-        "perk2Id" : 8345,
+        "perk1Id" : 8347,
+        "perk2Id" : 8306,
         "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8437,
+        "perk2Id" : 8446,
+        "perk3Id" : 8444,
+        "perk4Id" : 8451,
+        "styleId" : 8400
+      },
+      "secondary" : {
+        "perk1Id" : 8226,
+        "perk2Id" : 8210,
+        "styleId" : 8200
       }
     }
   ],
@@ -207,7 +231,17 @@
     {
       "games" : 1,
       "spell1Id" : 4,
-      "spell2Id" : 14
+      "spell2Id" : 7
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 12,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 7,
+      "spell2Id" : 4
     }
   ]
 }

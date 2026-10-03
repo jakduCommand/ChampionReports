@@ -1,0 +1,316 @@
+{
+  "bans" : 0,
+  "boots" : [
+    {
+      "bootId" : 3158,
+      "games" : 1
+    },
+    {
+      "bootId" : 3020,
+      "games" : 1
+    },
+    {
+      "bootId" : 3111,
+      "games" : 1
+    }
+  ],
+  "championId" : 497,
+  "championName" : "Rakan",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 3,
+      "minute" : 1,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 2,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 3,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 4,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 5,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 6,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 7,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 8,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 9,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 10,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 11,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 12,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 13,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 14,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 15,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 16,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 17,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 18,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 19,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 20,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 21,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 22,
+      "wins" : 2
+    },
+    {
+      "games" : 3,
+      "minute" : 23,
+      "wins" : 2
+    },
+    {
+      "games" : 2,
+      "minute" : 24,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 25,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 26,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 27,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 28,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 29,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 30,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 31,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 32,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 33,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 34,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 35,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 36,
+      "wins" : 0
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 1,
+        "itemId" : 3152
+      },
+      {
+        "games" : 1,
+        "itemId" : 3190
+      },
+      {
+        "games" : 1,
+        "itemId" : 3050
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 1,
+        "itemId" : 3190
+      },
+      {
+        "games" : 1,
+        "itemId" : 3109
+      },
+      {
+        "games" : 1,
+        "itemId" : 4646
+      }
+    ],
+    "core3" : [
+      {
+        "games" : 1,
+        "itemId" : 3109
+      }
+    ],
+    "core4" : [
+
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 12,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 142,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 114,
+      "wins" : 0
+    }
+  ],
+  "performance" : {
+    "games" : 3,
+    "wins" : 2
+  },
+  "runes" : [
+    {
+      "games" : 2,
+      "primary" : {
+        "perk1Id" : 8465,
+        "perk2Id" : 8463,
+        "perk3Id" : 8473,
+        "perk4Id" : 8242,
+        "styleId" : 8400
+      },
+      "secondary" : {
+        "perk1Id" : 8141,
+        "perk2Id" : 8106,
+        "styleId" : 8100
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8143,
+        "perk3Id" : 8141,
+        "perk4Id" : 8106,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8210,
+        "perk2Id" : 8237,
+        "styleId" : 8200
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 1,
+      "spell1Id" : 7,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 7
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 14,
+      "spell2Id" : 4
+    }
+  ]
+}

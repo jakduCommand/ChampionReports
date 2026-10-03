@@ -1,0 +1,282 @@
+{
+  "bans" : 0,
+  "boots" : [
+    {
+      "bootId" : 3111,
+      "games" : 4
+    },
+    {
+      "bootId" : 3047,
+      "games" : 1
+    }
+  ],
+  "championId" : 150,
+  "championName" : "Gnar",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 5,
+      "minute" : 1,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 2,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 3,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 4,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 5,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 6,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 7,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 8,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 9,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 10,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 11,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 12,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 13,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 14,
+      "wins" : 2
+    },
+    {
+      "games" : 5,
+      "minute" : 15,
+      "wins" : 2
+    },
+    {
+      "games" : 4,
+      "minute" : 16,
+      "wins" : 1
+    },
+    {
+      "games" : 4,
+      "minute" : 17,
+      "wins" : 1
+    },
+    {
+      "games" : 4,
+      "minute" : 18,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 19,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 20,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 21,
+      "wins" : 1
+    },
+    {
+      "games" : 3,
+      "minute" : 22,
+      "wins" : 1
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 5,
+        "itemId" : 3078
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 1,
+        "itemId" : 3071
+      },
+      {
+        "games" : 1,
+        "itemId" : 6695
+      }
+    ],
+    "core3" : [
+
+    ],
+    "core4" : [
+
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 8,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 887,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 799,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 517,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 17,
+      "wins" : 0
+    }
+  ],
+  "performance" : {
+    "games" : 5,
+    "wins" : 2
+  },
+  "runes" : [
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8021,
+        "perk2Id" : 9101,
+        "perk3Id" : 9104,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8444,
+        "perk2Id" : 8451,
+        "styleId" : 8400
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8021,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8451,
+        "perk2Id" : 8444,
+        "styleId" : 8400
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8021,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8017,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8451,
+        "perk2Id" : 8444,
+        "styleId" : 8400
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8021,
+        "perk2Id" : 9111,
+        "perk3Id" : 9104,
+        "perk4Id" : 8299,
+        "styleId" : 8000
+      },
+      "secondary" : {
+        "perk1Id" : 8304,
+        "perk2Id" : 8347,
+        "styleId" : 8300
+      }
+    },
+    {
+      "games" : 1,
+      "primary" : {
+        "perk1Id" : 8437,
+        "perk2Id" : 8446,
+        "perk3Id" : 8473,
+        "perk4Id" : 8451,
+        "styleId" : 8400
+      },
+      "secondary" : {
+        "perk1Id" : 9104,
+        "perk2Id" : 9111,
+        "styleId" : 8000
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 3,
+      "spell1Id" : 12,
+      "spell2Id" : 4
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 11
+    },
+    {
+      "games" : 1,
+      "spell1Id" : 4,
+      "spell2Id" : 12
+    }
+  ]
+}

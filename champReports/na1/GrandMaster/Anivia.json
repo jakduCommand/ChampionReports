@@ -1,0 +1,262 @@
+{
+  "bans" : 4,
+  "boots" : [
+    {
+      "bootId" : 3009,
+      "games" : 2
+    }
+  ],
+  "championId" : 34,
+  "championName" : "Anivia",
+  "expectedWinRateByMinute" : [
+    {
+      "games" : 2,
+      "minute" : 1,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 2,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 3,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 4,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 5,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 6,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 7,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 8,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 9,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 10,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 11,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 12,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 13,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 14,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 15,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 16,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 17,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 18,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 19,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 20,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 21,
+      "wins" : 1
+    },
+    {
+      "games" : 2,
+      "minute" : 22,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "minute" : 23,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 24,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 25,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 26,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 27,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 28,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 29,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 30,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 31,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 32,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 33,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 34,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 35,
+      "wins" : 0
+    },
+    {
+      "games" : 1,
+      "minute" : 36,
+      "wins" : 0
+    }
+  ],
+  "items" : {
+    "core1" : [
+      {
+        "games" : 2,
+        "itemId" : 3109
+      }
+    ],
+    "core2" : [
+      {
+        "games" : 1,
+        "itemId" : 6665
+      }
+    ],
+    "core3" : [
+      {
+        "games" : 1,
+        "itemId" : 3742
+      }
+    ],
+    "core4" : [
+
+    ],
+    "core5" : [
+
+    ],
+    "core6" : [
+
+    ]
+  },
+  "matchups" : [
+    {
+      "games" : 1,
+      "opponentChampionId" : 12,
+      "wins" : 1
+    },
+    {
+      "games" : 1,
+      "opponentChampionId" : 412,
+      "wins" : 0
+    }
+  ],
+  "performance" : {
+    "games" : 2,
+    "wins" : 1
+  },
+  "runes" : [
+    {
+      "games" : 2,
+      "primary" : {
+        "perk1Id" : 8112,
+        "perk2Id" : 8126,
+        "perk3Id" : 8137,
+        "perk4Id" : 8105,
+        "styleId" : 8100
+      },
+      "secondary" : {
+        "perk1Id" : 8226,
+        "perk2Id" : 8234,
+        "styleId" : 8200
+      }
+    }
+  ],
+  "summonerSpells" : [
+    {
+      "games" : 2,
+      "spell1Id" : 14,
+      "spell2Id" : 4
+    }
+  ]
+}
